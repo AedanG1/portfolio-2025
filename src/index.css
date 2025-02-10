@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+	--font-display: "DM Sans", "san-serif";
+}
+
+@layer base {
+	body {
+		@apply max-w-6xl mx-auto bg-neutral-50 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 px-2;
+		font-family: var(--font-display);
+	}
+}
+
+p {
+	@apply text-neutral-500 dark:text-neutral-400;
+}
