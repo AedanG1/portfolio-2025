@@ -31,6 +31,15 @@ const ProjectPage = () => {
                         </p>
                     </div>
                     <div className="space-y-2">
+                        <h3 id="aws" className="text-2xl mt-2 scroll-mt-24">AWS Pipeline</h3>
+                        <img src="/aws.png"/>
+                        <p>Upon uploading a video (1,2) the client sends a request to the server for a pre-signed url to upload to an AWS S3 bucket.
+                            (3) The client then sends the uploaded video and thumbnail to the input S3 bucket. (4) Using a lambda function, (5) a MediaConvert
+                            job is started that is configured to optimize the video's file size. (6) Once upload is complete, the MediaConvert job outputs
+                            the new optimized video to the S3 output bucket. (7) The client is then able to request the optimized video from the S3 output bucket.
+                        </p>
+                    </div>
+                    <div className="space-y-2">
                         <h3 id="thumbnail" className="text-2xl mt-2 scroll-mt-24">Choosing a Thumbnail</h3>
                         <img src="/thumbnail.png"/>
                         <p>Admins can then select a frame from the uploaded video to set as a thumbnail for the user.</p>
@@ -66,11 +75,12 @@ const ProjectPage = () => {
                         <ul>
                             <li><a href="#overview" className="transition duration-200 hover:text-sky-700/80">Overview</a></li>
                             <li><a href="#screenshots" className="transition duration-200 hover:text-sky-700/80">Screenshots</a></li>
-                            <li><a href="#library" className="ml-8 transition duration-200 hover:text-sky-700/80">⌙ Library</a></li>
-                            <li><a href="#upload-video" className="ml-8 transition duration-200 hover:text-sky-700/80">⌙ Upload Video</a></li>
-                            <li><a href="#thumbnail" className="ml-8 transition duration-200 hover:text-sky-700/80">⌙ Choosing a Thumbnail</a></li>
-                            <li><a href="#tags" className="ml-8 transition duration-200 hover:text-sky-700/80">⌙ Managing Tags</a></li>
-                            <li><a href="#videos" className="ml-8 transition duration-200 hover:text-sky-700/80">⌙ Managing Videos</a></li>
+                            <li><a href="#library" className="ml-6 transition duration-200 hover:text-sky-700/80">⌙ Library</a></li>
+                            <li><a href="#upload-video" className="ml-6 transition duration-200 hover:text-sky-700/80">⌙ Upload Video</a></li>
+                            <li><a href="#aws" className="ml-6 transition duration-200 hover:text-sky-700/80">⌙ AWS Pipeline</a></li>
+                            <li><a href="#thumbnail" className="ml-6 transition duration-200 hover:text-sky-700/80">⌙ Choosing a Thumbnail</a></li>
+                            <li><a href="#tags" className="ml-6 transition duration-200 hover:text-sky-700/80">⌙ Managing Tags</a></li>
+                            <li><a href="#videos" className="ml-6 transition duration-200 hover:text-sky-700/80">⌙ Managing Videos</a></li>
                         </ul>
                     </div>
                 </aside>
