@@ -13,28 +13,28 @@ function App() {
   return (
     <Routes location={location}>
       <Route element={<Layout />}>
-        <Route key={location.pathname} path="/" element={
+        <Route path="/" element={
           <AnimatePresence mode="wait">
             <PageWrapper key={location.pathname}>
               <Home />
             </PageWrapper>
           </AnimatePresence>
           }/>
-        <Route key={location.pathname} path="/projects" element={
+        <Route path="/projects" element={
           <AnimatePresence mode="wait">
             <PageWrapper key={location.pathname}>
               <Projects />
             </PageWrapper>
           </AnimatePresence>
         }/>
-        <Route key={location.pathname} path="/projects/bjjvs" element={
+        <Route path="/projects/bjjvs" element={
           <AnimatePresence mode="wait">
             <PageWrapper key={location.pathname}>
               <ProjectPage />
             </PageWrapper>
           </AnimatePresence>
         }/>
-        <Route key={location.pathname} path="/contact" element={
+        <Route path="/contact" element={
           <AnimatePresence mode="wait">
             <PageWrapper key={location.pathname}>
               <Contact />

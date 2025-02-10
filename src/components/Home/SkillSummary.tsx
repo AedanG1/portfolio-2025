@@ -33,7 +33,7 @@ const SkillSummary = () => {
             <div className="w-full md:w-1/2 place-self-center px-2 py-2 flex flex-row">
                 {options.map((option) => (
                     <button
-                        key={option.name}
+                        key={`button-${option.name}`}
                         name={option.name}
                         onClick={handleSkillClick}
                         type="button"
@@ -43,7 +43,7 @@ const SkillSummary = () => {
                     >
                         {option.name.charAt(0).toUpperCase() + option.name.slice(1)}
                         {selectedSkill === option.name && <motion.div
-                            layoutId="skillUnderline"
+                            // layoutId="skillUnderline"
                             className="absolute w-full h-full top-0 left-0 right-0 border border-neutral-400" 
                         ></motion.div>}
                     </button>
@@ -57,7 +57,7 @@ const SkillSummary = () => {
                             .filter(option => selectedSkill === option.name)
                             .map(option => (
                                 <motion.div
-                                    key={option.name}
+                                    key={`div-${option.name}`}
                                     initial={{ opacity: 0, x: 20 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     exit={{ opacity: 0, x: -20 }}
