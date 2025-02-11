@@ -1,12 +1,11 @@
-import ProjectCardSm from "../Projects/ProjectCardSm";
+import ProjectCardLg from "./ProjectCardLg";
 
-const ProjectsSummary = () => {
-
+const ProjectsGrid = () => {
     return (
-        <div className="flex flex-col md:flex-row mt-44 space-y-6 md:space-y-0">
-            <h4 className="text-5xl font-semibold w-full md:w-4/6">Projects</h4>
-            <div className="w-full md:w-full flex flex-col gap-4">
-                <ProjectCardSm 
+        <div className="space-y-12 mb-40">
+            <h1 className="text-4xl font-semibold w-full">Projects</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <ProjectCardLg 
                     link="/projects/bjjvs"
                     img={"/bjjvs-hero.png"}
                     dateType="2025 · personal project"
@@ -17,7 +16,7 @@ const ProjectsSummary = () => {
                         Filter by tags to find specific videos by topic.
                     "
                 />
-                <ProjectCardSm 
+                <ProjectCardLg 
                     link="/projects/welcomebook"
                     img={"/welcomebook.png"}
                     dateType="2024 · personal project"
@@ -26,7 +25,7 @@ const ProjectsSummary = () => {
                     desc="A welcomebook app for an Airbnb host to provide information, activities, and rules
                     for their guests."
                 />
-                <ProjectCardSm 
+                <ProjectCardLg 
                     link="/projects/moviewatchlist"
                     img={"/moviewatchlist.png"}
                     dateType="2024 · personal project"
@@ -35,7 +34,7 @@ const ProjectsSummary = () => {
                     desc="A movie watchlist app that queries the IMDB database and the OMDB database to provide movie
                     details and available streaming services according to region."
                 />
-                <ProjectCardSm 
+                <ProjectCardLg 
                     link="#"
                     img={"/passwordgenerator.png"}
                     dateType="2024 · personal project"
@@ -43,10 +42,10 @@ const ProjectsSummary = () => {
                     stackArr={["React"]}
                     desc="A small password generator app"
                 />
-                <div>View more of my projects on <a className="underline" target="blank" href="https://github.com/AedanG1">GitHub</a></div>
+                <div className="mt-12">View more of my projects on <a className="underline" target="blank" href="https://github.com/AedanG1">GitHub</a></div>
             </div>
         </div>
     )
 }
 
-export default ProjectsSummary;
+export default ProjectsGrid;

@@ -1,4 +1,4 @@
-const ProjectPage = () => {
+const BjjvsPage = () => {
     return (
         <div className="space-y-20 mb-40">
             <div className="space-y-2">
@@ -89,4 +89,4 @@ const ProjectPage = () => {
     )
 }
 
-export default ProjectPage;
+export default BjjvsPage;
