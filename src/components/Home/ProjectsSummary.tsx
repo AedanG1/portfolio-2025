@@ -3,7 +3,7 @@ import { NavLink } from "react-router";
 const ProjectsSummary = () => {
 
     return (
-        <div className="flex flex-col md:flex-row space-y-6 md:space-y-0">
+        <div className="flex flex-col md:flex-row mt-44 space-y-6 md:space-y-0">
             <h4 className="text-5xl font-semibold w-full md:w-4/6">Projects</h4>
             <div className="w-full md:w-full flex flex-col gap-12">
                 <NavLink to="/projects/bjjvs">
