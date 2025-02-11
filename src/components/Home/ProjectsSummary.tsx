@@ -36,7 +36,7 @@ const ProjectsSummary = () => {
                     details and available streaming services according to region."
                 />
                 <ProjectCardSm 
-                    link="#"
+                    link="https://aedang1.github.io/"
                     img={"/passwordgenerator.png"}
                     dateType="2024 · personal project"
                     title="Password Generator"

@@ -35,7 +35,7 @@ const ProjectsGrid = () => {
                     details and available streaming services according to region."
                 />
                 <ProjectCardLg 
-                    link="#"
+                    link="https://aedang1.github.io/"
                     img={"/passwordgenerator.png"}
                     dateType="2024 · personal project"
                     title="Password Generator"
