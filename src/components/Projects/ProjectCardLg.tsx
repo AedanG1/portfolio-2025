@@ -3,13 +3,14 @@ import { NavLink } from "react-router";
 interface ProjectCardLgProps {
     link: string;
     img: string;
+    alt: string;
     dateType: string;
     title: string;
     stackArr: string[];
     desc: string;
 }
 
-const ProjectCardLg = ({link, img, dateType, title, stackArr, desc}: ProjectCardLgProps) => {
+const ProjectCardLg = ({link, img, alt, dateType, title, stackArr, desc}: ProjectCardLgProps) => {
 
     const techStack = stackArr.map(item => (
         <li className="text-sm border border-neutral-400 px-2">{item}</li>
@@ -23,7 +24,7 @@ const ProjectCardLg = ({link, img, dateType, title, stackArr, desc}: ProjectCard
             shadow-md shadow-neutral-300 dark:shadow-neutral-900 transition ease-in-out
             flex flex-col gap-4 group flex-1 h-full">
             <div className="overflow-hidden">
-                <img src={img} className="group-hover:scale-105 transition ease-in-out"></img>
+                <img src={img} alt={alt} className="group-hover:scale-105 transition ease-in-out"></img>
             </div>
             <div className="space-y-1">
                 <p className="text-sm">{dateType}</p>

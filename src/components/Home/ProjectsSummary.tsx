@@ -9,6 +9,7 @@ const ProjectsSummary = () => {
                 <ProjectCardSm 
                     link="/projects/bjjvs"
                     img={"/bjjvs-hero.png"}
+                    alt="A screenshot of a video sharing web app"
                     dateType="2025 · personal project"
                     title="Video Sharing Webapp"
                     stackArr={["React", "Tailwind", "Express.js", "PostgreSQL", "AWS"]}
@@ -20,6 +21,7 @@ const ProjectsSummary = () => {
                 <ProjectCardSm 
                     link="/projects/welcomebook"
                     img={"/welcomebook.png"}
+                    alt="A screenshot of an Airbnb web based welcomebook"
                     dateType="2024 · personal project"
                     title="Airbnb Welcomebook app"
                     stackArr={["Python", "Django", "JavaScript"]}
@@ -29,6 +31,7 @@ const ProjectsSummary = () => {
                 <ProjectCardSm 
                     link="/projects/moviewatchlist"
                     img={"/moviewatchlist.png"}
+                    alt="A screenshot of a movie watchlist webapp"
                     dateType="2024 · personal project"
                     title="Movie Watchlist"
                     stackArr={["JavaScript", "HTML", "CSS"]}
@@ -38,6 +41,7 @@ const ProjectsSummary = () => {
                 <ProjectCardSm 
                     link="https://aedang1.github.io/"
                     img={"/passwordgenerator.png"}
+                    alt="A screenshot of a password generator"
                     dateType="2024 · personal project"
                     title="Password Generator"
                     stackArr={["React"]}

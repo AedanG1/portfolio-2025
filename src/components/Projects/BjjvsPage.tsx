@@ -8,7 +8,7 @@ const BjjvsPage = () => {
             <div className="flex flex-col-reverse md:flex-row gap-8">
                 <article className="basis-3/4 space-y-8">
                     <div className="space-y-2">
-                        <img src="/bjjvs-hero.png" />
+                        <img src="/bjjvs-hero.png" alt="A screenshot of the homepage for a Video Sharing app. Shows a grid of videos"/>
                         <h2 id="overview" className="text-3xl mt-2 scroll-mt-24">Overview</h2>
                         <p>This video sharing webapp allows users to watch and favorite videos uploaded by the admin.
                             The admin can create, edit, and delete tags as well as uploaded videos. Upon uploading a video,
@@ -20,19 +20,19 @@ const BjjvsPage = () => {
                     <h2 id="screenshots" className="text-3xl mt-2 mb-4 scroll-mt-24">Screenshots</h2>
                     <div className="space-y-2">
                         <h3 id="library" className="text-2xl mt-2 scroll-mt-24">Library</h3>
-                        <img src="/library.png"/>
+                        <img src="/library.png" alt="A screenshot of a the Library page of the Video Sharing app. A filter dropdown is shown"/>
                         <p>Users can filter videos in Library, This week, and Favorites using tags created by an admin.</p>
                     </div>
                     <div className="space-y-2">
                         <h3 id="upload-video" className="text-2xl mt-2 scroll-mt-24">Upload Video</h3>
-                        <img src="/upload-video.png"/>
+                        <img src="/upload-video.png" alt="A screenshot of the admin dashboard"/>
                         <p>Admins can drag and drop or click to upload videos, add tags that have been created, set the skill level,
                             and set the instructor in the video.
                         </p>
                     </div>
                     <div className="space-y-2">
                         <h3 id="aws" className="text-2xl mt-2 scroll-mt-24">AWS Pipeline</h3>
-                        <img src="/aws.png"/>
+                        <img src="/aws.png" alt="A diagram of the AWS pipeline"/>
                         <p>Upon uploading a video (1,2) the client sends a request to the server for a pre-signed url to upload to an AWS S3 bucket.
                             (3) The client then sends the uploaded video and thumbnail to the input S3 bucket. (4) Using a lambda function, (5) a MediaConvert
                             job is started that is configured to optimize the video's file size. (6) Once upload is complete, the MediaConvert job outputs
@@ -41,17 +41,17 @@ const BjjvsPage = () => {
                     </div>
                     <div className="space-y-2">
                         <h3 id="thumbnail" className="text-2xl mt-2 scroll-mt-24">Choosing a Thumbnail</h3>
-                        <img src="/thumbnail.png"/>
+                        <img src="/thumbnail.png" alt="A screenshot of the thumbnail choosing feature"/>
                         <p>Admins can then select a frame from the uploaded video to set as a thumbnail for the user.</p>
                     </div>
                     <div className="space-y-2">
                         <h3 id="tags" className="text-2xl mt-2 scroll-mt-24">Managing Tags</h3>
-                        <img src="/tags.png"/>
+                        <img src="/tags.png" alt="A screenshot of the manage tags form"/>
                         <p>Admins create, edit, and delete tags to attach to videos for users to filter videos with.</p>
                     </div>
                     <div className="space-y-2">
                         <h3 id="videos" className="text-2xl mt-2 scroll-mt-24">Managing Videos</h3>
-                        <img src="/videos.png"/>
+                        <img src="/videos.png" alt="A screenshot of the manage videos form"/>
                         <p>Here admins can update or delete titles, tags, and videos</p>
                     </div>
                 </article>
