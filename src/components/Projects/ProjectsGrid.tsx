@@ -10,7 +10,7 @@ const ProjectsGrid = () => {
                     img={"/bjjvs-hero.png"}
                     alt="A screenshot of a video sharing web app"
                     dateType="2025 · personal project"
-                    title="Video Sharing Webapp"
+                    title="Video Sharing Web App"
                     stackArr={["React", "Tailwind", "Express.js", "PostgreSQL", "AWS"]}
                     desc="
                         A video sharing app where Admins can upload videos for users to watch and favorite.
@@ -30,7 +30,7 @@ const ProjectsGrid = () => {
                 <ProjectCardLg 
                     link="/projects/moviewatchlist"
                     img={"/moviewatchlist.png"}
-                    alt="A screenshot of a movie watchlist webapp"
+                    alt="A screenshot of a movie watchlist web app"
                     dateType="2024 · personal project"
                     title="Movie Watchlist"
                     stackArr={["JavaScript", "HTML", "CSS"]}

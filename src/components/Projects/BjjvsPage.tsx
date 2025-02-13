@@ -3,16 +3,16 @@ const BjjvsPage = () => {
         <div className="space-y-20 mb-40">
             <div className="space-y-2">
                 <p>2025 · personal project</p>
-                <h1 className="text-4xl font-semibold w-full">Video Sharing Webapp</h1>
+                <h1 className="text-4xl font-semibold w-full">Video Sharing Web App</h1>
             </div>
             <div className="flex flex-col-reverse md:flex-row gap-8">
                 <article className="basis-3/4 space-y-8">
                     <div className="space-y-2">
                         <img src="/bjjvs-hero.png" alt="A screenshot of the homepage for a Video Sharing app. Shows a grid of videos"/>
                         <h2 id="overview" className="text-3xl mt-2 scroll-mt-24">Overview</h2>
-                        <p>This video sharing webapp allows users to watch and favorite videos uploaded by the admin.
-                            The admin can create, edit, and delete tags as well as uploaded videos. Upon uploading a video,
-                            the admin is able to choose a frame out of the uploaded video to set as a thumbnail. Videos are uploaded
+                        <p>This video sharing webapp for a martial arts gym allows members to watch and favorite instructional videos uploaded by the admin.
+                            The admin creates tags for the video in order to allow members to filter their searches. Upon uploading a video,
+                            a frame is chosen out of the uploaded video to set as a thumbnail. Videos are uploaded
                             directly to an AWS S3 bucket with a pre-signed url, then optimized for filesize through AWS MediaConvert
                             saving storage space.
                         </p>
@@ -21,13 +21,13 @@ const BjjvsPage = () => {
                     <div className="space-y-2">
                         <h3 id="library" className="text-2xl mt-2 scroll-mt-24">Library</h3>
                         <img src="/library.png" alt="A screenshot of a the Library page of the Video Sharing app. A filter dropdown is shown"/>
-                        <p>Users can filter videos in Library, This week, and Favorites using tags created by an admin.</p>
+                        <p>Members can filter videos in Library, This week, and Favorites using tags created by an admin.</p>
                     </div>
                     <div className="space-y-2">
                         <h3 id="upload-video" className="text-2xl mt-2 scroll-mt-24">Upload Video</h3>
                         <img src="/upload-video.png" alt="A screenshot of the admin dashboard"/>
                         <p>Admins can drag and drop or click to upload videos, add tags that have been created, set the skill level,
-                            and set the instructor in the video.
+                            and include the instructor's name.
                         </p>
                     </div>
                     <div className="space-y-2">
@@ -42,12 +42,12 @@ const BjjvsPage = () => {
                     <div className="space-y-2">
                         <h3 id="thumbnail" className="text-2xl mt-2 scroll-mt-24">Choosing a Thumbnail</h3>
                         <img src="/thumbnail.png" alt="A screenshot of the thumbnail choosing feature"/>
-                        <p>Admins can then select a frame from the uploaded video to set as a thumbnail for the user.</p>
+                        <p>Admins can then select a frame from the uploaded video to set as a thumbnail.</p>
                     </div>
                     <div className="space-y-2">
                         <h3 id="tags" className="text-2xl mt-2 scroll-mt-24">Managing Tags</h3>
                         <img src="/tags.png" alt="A screenshot of the manage tags form"/>
-                        <p>Admins create, edit, and delete tags to attach to videos for users to filter videos with.</p>
+                        <p>Admins create, edit, and delete tags to attach to videos for members to filter videos with.</p>
                     </div>
                     <div className="space-y-2">
                         <h3 id="videos" className="text-2xl mt-2 scroll-mt-24">Managing Videos</h3>
