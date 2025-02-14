@@ -13,6 +13,7 @@ const BjjvsPage = () => {
                         <img src="/bjjvs-hero.png" alt="A screenshot of the homepage for a Video Sharing app. Shows a grid of videos"/>
                         <h2 id="overview" className="text-3xl mt-2 scroll-mt-24">Overview</h2>
                         <p>This video sharing webapp for a martial arts gym allows members to watch and favorite instructional videos uploaded by the admin.
+                            Users are authenticated and authorized using express sessions stored in a Redis database.
                             The admin creates tags for the video in order to allow members to filter their searches. Upon uploading a video,
                             a frame is chosen out of the uploaded video to set as a thumbnail. Videos are uploaded
                             directly to an AWS S3 bucket with a pre-signed url, then optimized for filesize through AWS MediaConvert
