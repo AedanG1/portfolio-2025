@@ -1,3 +1,5 @@
+import Icons from "../Icons/Icons";
+
 const BjjvsPage = () => {
     return (
         <div className="space-y-20 mb-40">
@@ -57,8 +59,8 @@ const BjjvsPage = () => {
                 </article>
                 <aside className="basis-1/4 md:sticky md:top-32 md:self-start space-y-4">
                     <h2 className="text-2xl">View Project</h2>
-                    <a className="px-4 py-2 bg-sky-700/60 rounded-md text-white" href="https://bjjvs.dev" target="/blank">
-                        ↖︎ View live
+                    <a className="px-4 py-2 bg-sky-700/60 rounded-md text-white inline-flex gap-2 items-center" href="https://bjjvs.dev" target="/blank">
+                        View live <span>{Icons.ArrowTopRight("size-4")}</span>
                     </a>
                     <div className="space-y-2 mt-6">
                         <h2 className="text-2xl mt-2">Tech Stack</h2>

@@ -1,5 +1,6 @@
 import SkillSummary from "./SkillSummary";
 import ProjectsSummary from "./ProjectsSummary";
+import Icons from "../Icons/Icons";
 
 const Home = () => {
 
@@ -14,6 +15,11 @@ const Home = () => {
                         engaging full-stack web applications by blending user-centered design
                         principles with modern web development.
                     </h3>
+                    <div className="mt-8">
+                        <a className="px-4 py-2 border border-neutral-400 inline-flex items-center gap-2" href="AedanGallivan-Resume2025.pdf" target="_blank" >
+                            View Resumé <span>{Icons.ArrowTopRight("size-4")}</span>
+                        </a>
+                    </div>
                 </div>
             </div>
             <SkillSummary />
