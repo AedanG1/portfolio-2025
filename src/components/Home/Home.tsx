@@ -5,8 +5,8 @@ import Icons from "../Icons/Icons";
 const Home = () => {
 
     return(
-        <div className="mb-64 space-y-24">
-            <div className="flex md:flex-row">
+        <main className="mb-64 space-y-24">
+            <header className="flex md:flex-row">
                 <div className="md:w-1/2">
                     <h1 className="font-primary text-3xl text-neutral-500 dark:text-neutral-400">Aedan Gallivan</h1>
                     <h2 className="text-5xl font-semibold">Web Designer and Developer</h2>
@@ -21,10 +21,10 @@ const Home = () => {
                         </a>
                     </div>
                 </div>
-            </div>
+            </header>
             <SkillSummary />
             <ProjectsSummary />
-        </div>
+        </main>
     )
 };
 

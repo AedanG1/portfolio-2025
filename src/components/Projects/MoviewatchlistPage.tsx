@@ -1,10 +1,10 @@
 const MoviewatchlistPage = () => {
     return(
-        <div className="space-y-20 mb-40">
-            <div className="space-y-2">
+        <main className="space-y-20 mb-40">
+            <header className="space-y-2">
                 <p>2024 · personal project</p>
                 <h1 className="text-4xl font-semibold w-full">Movie Watchlist</h1>
-            </div>
+            </header>
             <div className="place-self-center">
                 <iframe
                 width="853"
@@ -15,7 +15,7 @@ const MoviewatchlistPage = () => {
                 title="Movie Watchlist"
                 />
             </div>
-        </div> 
+        </main> 
     )
 }
 

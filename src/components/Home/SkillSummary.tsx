@@ -28,7 +28,7 @@ const SkillSummary = () => {
     ]
 
     return(
-        <div className="space-y-2">
+        <section className="space-y-2">
             <h4 className="w-full md:w-1/2 text-xl place-self-center">My tools so far,</h4>
             <div className="w-full md:w-1/2 place-self-center px-2 py-2 flex flex-row">
                 {options.map((option) => (
@@ -69,7 +69,7 @@ const SkillSummary = () => {
                              ))}
                 </AnimatePresence>
             </div>
-        </div>
+        </section>
     )
 };
 

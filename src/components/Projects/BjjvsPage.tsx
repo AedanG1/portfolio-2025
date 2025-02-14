@@ -2,11 +2,11 @@ import Icons from "../Icons/Icons";
 
 const BjjvsPage = () => {
     return (
-        <div className="space-y-20 mb-40">
-            <div className="space-y-2">
+        <main className="space-y-20 mb-40">
+            <header className="space-y-2">
                 <p>2025 · personal project</p>
                 <h1 className="text-4xl font-semibold w-full">Video Sharing Web App</h1>
-            </div>
+            </header>
             <div className="flex flex-col-reverse md:flex-row gap-8">
                 <article className="basis-3/4 space-y-8">
                     <div className="space-y-2">
@@ -87,7 +87,7 @@ const BjjvsPage = () => {
                     </div>
                 </aside>
             </div>
-        </div> 
+        </main> 
     )
 }
 
