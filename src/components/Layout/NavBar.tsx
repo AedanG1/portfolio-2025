@@ -12,7 +12,7 @@ const NavBar = () => {
     ]
 
     return (
-        <nav className="z-50 w-full max-w-7xl mx-auto bg-neutral-50 dark:bg-neutral-800 flex flex-row justify-between items-center px-2 py-4 md:py-8
+        <nav className="z-50 w-full max-w-7xl mx-auto bg-neutral-50 dark:bg-neutral-800 flex flex-row justify-between items-center px-2 py-4 md:py-8c
         fixed top-0 left-0 right-0 h-24">
             <Link to={"/"} className="font-light text-nowrap px-4 py-2 border border-neutral-400">AG</Link>
             <div className="w-fit space-x-4 hidden md:block">

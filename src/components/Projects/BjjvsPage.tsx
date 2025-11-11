@@ -12,7 +12,8 @@ const BjjvsPage = () => {
                     <div className="space-y-2">
                         <img src="/bjjvs-hero.png" alt="A screenshot of the homepage for a Video Sharing app. Shows a grid of videos"/>
                         <h2 id="overview" className="text-3xl mt-2 scroll-mt-24">Overview</h2>
-                        <p>This video sharing webapp for a martial arts gym allows members to watch and favorite instructional videos uploaded by the admin.
+                        <p>
+                            This video sharing webapp for a martial arts gym allows members to watch and favorite instructional videos uploaded by the admin.
                             Users are authenticated and authorized using express sessions stored in a Redis database.
                             The admin creates tags for the video in order to allow members to filter their searches. Upon uploading a video,
                             a frame is chosen out of the uploaded video to set as a thumbnail. Videos are uploaded
@@ -29,14 +30,16 @@ const BjjvsPage = () => {
                     <div className="space-y-2">
                         <h3 id="upload-video" className="text-2xl mt-2 scroll-mt-24">Upload Video</h3>
                         <img src="/upload-video.png" alt="A screenshot of the admin dashboard"/>
-                        <p>Admins can drag and drop or click to upload videos, add tags that have been created, set the skill level,
+                        <p>
+                            Admins can drag and drop or click to upload videos, add tags that have been created, set the skill level,
                             and include the instructor's name.
                         </p>
                     </div>
                     <div className="space-y-2">
                         <h3 id="aws" className="text-2xl mt-2 scroll-mt-24">AWS Pipeline</h3>
                         <img src="/aws.png" alt="A diagram of the AWS pipeline"/>
-                        <p>Upon uploading a video (1,2) the client sends a request to the server for a pre-signed url to upload to an AWS S3 bucket.
+                        <p>
+                            Upon uploading a video (1,2) the client sends a request to the server for a pre-signed url to upload to an AWS S3 bucket.
                             (3) The client then sends the uploaded video and thumbnail to the input S3 bucket. (4) Using a lambda function, (5) a MediaConvert
                             job is started that is configured to optimize the video's file size. (6) Once upload is complete, the MediaConvert job outputs
                             the new optimized video to the S3 output bucket. (7) The client is then able to request the optimized video from the S3 output bucket.
