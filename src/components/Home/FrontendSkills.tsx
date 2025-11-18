@@ -6,6 +6,30 @@ const FrontendSkills = ({svgSizes}: FrontendSkillsProps) => {
     return (
         <>
             <div className="flex flex-col items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" data-testid="geist-icon" height="48" stroke-linejoin="round" viewBox="0 0 16 16" width="48"><g clip-path="url(#clip0_53_108)">
+                    <circle cx="8" cy="8" r="7.375" fill="black" stroke="var(--ds-gray-1000)" strokeWidth="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.63 11V5" stroke="url(#paint0_linear_53_108vsxrmxu21)" strokeWidth="1.25" stroke-miterlimit="1.41421"/>
+                    <path fill-rule="evenodd" clipRule="evenodd" d="M5.995 5.00087V5H4.745V11H5.995V6.96798L12.3615 14.7076C12.712 14.4793 13.0434 14.2242 13.353 13.9453L5.99527 5.00065L5.995 5.00087Z" fill="url(#paint1_linear_53_108vsxrmxu21)"/>
+                    </g>
+                    <defs>
+                    <linearGradient id="paint0_linear_53_108vsxrmxu21" x1="11.13" y1="5" x2="11.13" y2="11" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="white"/>
+                    <stop offset="0.609375" stop-color="white" stop-opacity="0.57"/>
+                    <stop offset="0.796875" stop-color="white" stop-opacity="0"/>
+                    <stop offset="1" stop-color="white" stop-opacity="0"/>
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_53_108vsxrmxu21" x1="9.9375" y1="9.0625" x2="13.5574" y2="13.3992" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="white"/>
+                    <stop offset="1" stop-color="white" stop-opacity="0"/>
+                    </linearGradient>
+                    <clipPath id="clip0_53_108">
+                        <rect width="16" height="16" fill="red"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+                <p className="text-sm">Next.js</p>
+            </div>
+            <div className="flex flex-col items-center gap-1">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-11.5 -10.23174 23 20.46348" className={svgSizes}>
                     <circle cx="0" cy="0" r="2.05" fill="#61dafb"/>
                     <g stroke="#61dafb" strokeWidth="1" fill="none">
@@ -35,23 +59,6 @@ const FrontendSkills = ({svgSizes}: FrontendSkillsProps) => {
                 </g>
                 </svg>
                 <p className="text-sm">TypeScript</p>
-            </div>
-            <div className="flex flex-col items-center gap-1">
-                <svg className={svgSizes}viewBox="0 -51 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
-                    <defs>
-                        <linearGradient x1="-2.77777778%" y1="32%" x2="100%" y2="67.5555556%" id="linearGradient-1">
-                        <stop stopColor="#2298BD" offset="0%">
-                        </stop>
-                        <stop stopColor="#0ED7B5" offset="100%">
-                        </stop>
-                        </linearGradient>
-                    </defs>
-                    <g>
-                        <path d="M128,-1.0658141e-14 C93.8666667,-1.0658141e-14 72.5333333,17.0666667 64,51.2 C76.8,34.1333333 91.7333333,27.7333333 108.8,32 C118.537481,34.4343704 125.497363,41.4985481 133.201067,49.3184 C145.750756,62.0567704 160.275437,76.8 192,76.8 C226.133333,76.8 247.466667,59.7333333 256,25.6 C243.2,42.6666667 228.266667,49.0666667 211.2,44.8 C201.462519,42.3656296 194.502637,35.3014519 186.798933,27.4816 C174.249244,14.7432296 159.724563,-1.0658141e-14 128,-1.0658141e-14 Z M64,76.8 C29.8666667,76.8 8.53333333,93.8666667 0,128 C12.8,110.933333 27.7333333,104.533333 44.8,108.8 C54.5374815,111.23437 61.497363,118.298548 69.2010667,126.1184 C81.7507556,138.85677 96.275437,153.6 128,153.6 C162.133333,153.6 183.466667,136.533333 192,102.4 C179.2,119.466667 164.266667,125.866667 147.2,121.6 C137.462519,119.16563 130.502637,112.101452 122.798933,104.2816 C110.249244,91.5432296 95.724563,76.8 64,76.8 Z" fill="url(#linearGradient-1)">
-                        </path>
-                    </g>
-                </svg>
-                <p className="text-sm">Tailwindcss</p>
             </div>
             <div className="flex flex-col items-center gap-1">
                 <svg className={svgSizes}viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
