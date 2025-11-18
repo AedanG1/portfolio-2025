@@ -6,8 +6,6 @@ import PageWrapper from "./components/Layout/PageWrapper"
 import ProjectsGrid from "./components/Projects/ProjectsGrid"
 import Contact from "./components/Contact/Contact"
 import BjjvsPage from "./components/Projects/BjjvsPage"
-import WelcomebookPage from "./components/Projects/WelcomebookPage"
-import MoviewatchlistPage from "./components/Projects/MoviewatchlistPage"
 
 function App() {
   const location = useLocation();
@@ -33,20 +31,6 @@ function App() {
           <AnimatePresence mode="wait">
             <PageWrapper key={location.pathname}>
               <BjjvsPage />
-            </PageWrapper>
-          </AnimatePresence>
-        }/>
-        <Route path="/projects/welcomebook" element={
-          <AnimatePresence mode="wait">
-            <PageWrapper key={location.pathname}>
-              <WelcomebookPage />
-            </PageWrapper>
-          </AnimatePresence>
-        }/>
-        <Route path="/projects/moviewatchlist" element={
-          <AnimatePresence mode="wait">
-            <PageWrapper key={location.pathname}>
-              <MoviewatchlistPage />
             </PageWrapper>
           </AnimatePresence>
         }/>
