@@ -6,6 +6,18 @@ const ProjectsSummary = () => {
         <section className="flex flex-col md:flex-row mt-44 space-y-6 md:space-y-0">
             <h4 className="text-5xl font-semibold w-full md:w-4/6">Projects</h4>
             <div className="w-full md:w-full flex flex-col gap-4">
+                <ProjectCardSm
+                    link="/projects/paliascheduler"
+                    img={"/paliascheduler-hero.png"}
+                    alt="A screenshot of the palia scheduler app"
+                    dateType="2025 · personal project"
+                    title="Palia Scheduler"
+                    stackArr={["Next.js", "Tailwind", "Python"]}
+                    desc="
+                        A scheduling app for Palia (videogame). Users can schedule in-game events and get notified when they're
+                        about to go live.
+                    "
+                />
                 <ProjectCardSm 
                     link="/projects/bjjvs"
                     img={"/bjjvs-hero.png"}

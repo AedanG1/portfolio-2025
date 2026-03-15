@@ -5,18 +5,9 @@ const Contact = () => {
         <div className="flex flex-col mt-40 md:flex-row space-y-6 md:space-y-0">
             <div className="space-y-2 w-full md:w-1/2">
                 <h2 className="text-4xl font-semibold w-full md:w-4/6">Contact</h2>
-                <p>Feel free to email me or send me a message via the links.</p>
             </div>
             <div className="space-y-2">
                 <h2 className="text-3xl text-nowrap w-full md:w-4/6 mb-4">Reach Out</h2>
-                <h3 className="text-xl">
-                    <a 
-                        className="flex flex-row items-center gap-2"
-                        href="mailto:aedan.g@gmail.com"
-                    >
-                        {Icons.Mail("size-6")}aedan.g@gmail.com
-                    </a>
-                </h3>
                 <h3 className="text-xl">
                     <a 
                         className="flex flex-row items-center gap-2" 

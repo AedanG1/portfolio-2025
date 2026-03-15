@@ -6,6 +6,7 @@ import PageWrapper from "./components/Layout/PageWrapper"
 import ProjectsGrid from "./components/Projects/ProjectsGrid"
 import Contact from "./components/Contact/Contact"
 import BjjvsPage from "./components/Projects/BjjvsPage"
+import PaliaSchedulerPage from "./components/Projects/PaliaSchedulerPage"
 
 function App() {
   const location = useLocation();
@@ -31,6 +32,13 @@ function App() {
           <AnimatePresence mode="wait">
             <PageWrapper key={location.pathname}>
               <BjjvsPage />
+            </PageWrapper>
+          </AnimatePresence>
+        }/>
+        <Route path="/projects/paliascheduler" element={
+          <AnimatePresence mode="wait">
+            <PageWrapper key={location.pathname}>
+              <PaliaSchedulerPage />
             </PageWrapper>
           </AnimatePresence>
         }/>

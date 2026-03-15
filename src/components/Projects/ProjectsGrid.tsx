@@ -6,6 +6,18 @@ const ProjectsGrid = () => {
             <h1 className="text-4xl font-semibold w-full">Projects</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <ProjectCardLg 
+                    link="/projects/paliascheduler"
+                    img={"/paliascheduler-hero.png"}
+                    alt="A screenshot of the palia scheduler app"
+                    dateType="2025 · personal project"
+                    title="Palia Scheduler"
+                    stackArr={["Next.js", "Tailwind", "Python"]}
+                    desc="
+                        A scheduling app for Palia (videogame). Users can schedule in-game events and get notified when they're
+                        about to go live.
+                    "
+                />
+                <ProjectCardLg 
                     link="/projects/bjjvs"
                     img={"/bjjvs-hero.png"}
                     alt="A screenshot of a video sharing web app"
