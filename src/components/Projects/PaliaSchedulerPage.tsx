@@ -178,6 +178,7 @@ const BjjvsPage = () => {
               <li className="border border-neutral-400 px-2">Next.js</li>
               <li className="border border-neutral-400 px-2">Tailwind</li>
               <li className="border border-neutral-400 px-2">Python</li>
+              <li className="border border-neutral-400 px-2">Vitest</li>
             </ul>
           </div>
           <div className="hidden md:block">

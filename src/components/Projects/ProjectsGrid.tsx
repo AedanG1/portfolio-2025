@@ -11,7 +11,7 @@ const ProjectsGrid = () => {
                     alt="A screenshot of the palia scheduler app"
                     dateType="2025 · personal project"
                     title="Palia Scheduler"
-                    stackArr={["Next.js", "Tailwind", "Python"]}
+                    stackArr={["Next.js", "Tailwind", "Python", "Vitest"]}
                     desc="
                         A scheduling app for Palia (videogame). Users can schedule in-game events and get notified when they're
                         about to go live.
