@@ -19,7 +19,7 @@ const NavBar = () => {
                 {routes.map(item => (
                     <NavItem key={item.name} route={item.route} name={item.name} />
                 ))}
-                <a className="px-4 py-2 border border-neutral-400 inline-flex gap-2 items-center" href="Aedan_Gallivan_Resume.pdf" target="_blank">
+                <a className="px-4 py-2 border border-neutral-400 inline-flex gap-2 items-center" href="/Aedan_Gallivan_Resume.pdf" target="_blank">
                     Resumé <span>{Icons.ArrowTopRight("size-4")}</span>
                 </a>
             </div>
@@ -28,7 +28,7 @@ const NavBar = () => {
                     {routes.map(item => (
                         <Link key={item.name} to={item.route} className="font-semibold">{item.name}</Link>
                     ))}    
-                    <a className="px-4 py-2 border border-neutral-400 inline-flex gap-2 items-center" href="AedanGallivan-Resume2025.pdf" target="_blank">
+                    <a className="px-4 py-2 border border-neutral-400 inline-flex gap-2 items-center" href="/Aedan_Gallivan_Resume.pdf" target="_blank">
                         Resumé <span>{Icons.ArrowTopRight("size-4")}</span>
                     </a>
                 </DropdownMenu>
