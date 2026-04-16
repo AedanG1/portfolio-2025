@@ -1,6 +1,6 @@
 import Icons from "../Icons/Icons";
 
-const BjjvsPage = () => {
+const PaliaSchedulerPage = () => {
   return (
     <main className="space-y-20 mb-40">
       <header className="space-y-2">
@@ -272,4 +272,4 @@ const BjjvsPage = () => {
   );
 };
 
-export default BjjvsPage;
+export default PaliaSchedulerPage;

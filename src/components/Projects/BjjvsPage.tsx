@@ -2,7 +2,7 @@ const BjjvsPage = () => {
     return (
         <main className="space-y-20 mb-40">
             <header className="space-y-2">
-                <p>2025 · personal project</p>
+                <p>2024 · personal project</p>
                 <h1 className="text-4xl font-semibold w-full">Video Sharing Web App</h1>
             </header>
             <div className="flex flex-col-reverse md:flex-row gap-20">
