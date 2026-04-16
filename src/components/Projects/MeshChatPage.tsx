@@ -154,9 +154,7 @@ const MeshChatPage = () => {
               <li className="border border-neutral-400 px-2">TypeScript</li>
               <li className="border border-neutral-400 px-2">WebSockets</li>
               <li className="border border-neutral-400 px-2">WebCrypto</li>
-              <li className="border border-neutral-400 px-2">Argon2id</li>
               <li className="border border-neutral-400 px-2">SQLite3</li>
-              <li className="border border-neutral-400 px-2">Claude Code</li>
             </ul>
           </div>
           <div className="hidden md:block">
