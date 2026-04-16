@@ -6,6 +6,17 @@ const ProjectsGrid = () => {
             <h1 className="text-4xl font-semibold w-full">Projects</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <ProjectCardLg 
+                    link="/projects/meshchat"
+                    img={"/mesh-chat-hero.png"}
+                    alt="A screenshot of the mesh topology of the mesh chat app"
+                    dateType="2026 · personal project"
+                    title="Mesh Chat"
+                    stackArr={["Express.js", "React", "TypeScript", "WebSockets", "WebCrypto", "Argon2id", "SQLite3", "Claude Code"]}
+                    desc="
+                        An End-to-End Encrypted chat app with an n-to-n mesh server topology.
+                    "
+                />
+                <ProjectCardLg 
                     link="/projects/paliascheduler"
                     img={"/paliascheduler-hero.png"}
                     alt="A screenshot of the palia scheduler app"

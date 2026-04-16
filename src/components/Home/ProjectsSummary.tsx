@@ -7,6 +7,17 @@ const ProjectsSummary = () => {
             <h4 className="text-5xl font-semibold w-full md:w-4/6">Projects</h4>
             <div className="w-full md:w-full flex flex-col gap-4">
                 <ProjectCardSm
+                    link="/projects/meshchat"
+                    img={"/mesh-chat-hero.png"}
+                    alt="A screenshot of the mesh topology of the mesh chat app"
+                    dateType="2026 · personal project"
+                    title="Mesh Chat"
+                    stackArr={["Express.js", "React", "TypeScript", "WebSockets", "WebCrypto", "Argon2id", "SQLite3", "Claude Code"]}
+                    desc="
+                        An End-to-End Encrypted chat app with an n-to-n mesh server topology.
+                    "
+                />
+                <ProjectCardSm
                     link="/projects/paliascheduler"
                     img={"/paliascheduler-hero.png"}
                     alt="A screenshot of the palia scheduler app"
