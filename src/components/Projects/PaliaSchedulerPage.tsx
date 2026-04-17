@@ -1,13 +1,13 @@
 import Icons from "../Icons/Icons";
-import hero from "../../assets/paliascheduler-hero.png"
-import scheduling from "../../assets/paliascheduler-scheduling.png"
-import map from "../../assets/paliascheduler-map.png"
-import notification from "../../assets/paliascheduler-notification.png"
-import beforeInp from "../../assets/paliascheduler-before-inp.png"
-import beforeRender from "../../assets/paliascheduler-before-render.png"
-import afterInp from "../../assets/paliascheduler-after-inp.png"
-import afterRender from "../../assets/paliascheduler-after-render.png"
-import osUsage from "../../assets/paliascheduler-os-usage.png"
+import hero from "../../assets/paliascheduler-hero.png";
+import scheduling from "../../assets/paliascheduler-scheduling.png";
+import map from "../../assets/paliascheduler-map.png";
+import notification from "../../assets/paliascheduler-notification.png";
+import beforeInp from "../../assets/paliascheduler-before-inp.png";
+import beforeRender from "../../assets/paliascheduler-before-render.png";
+import afterInp from "../../assets/paliascheduler-after-inp.png";
+import afterRender from "../../assets/paliascheduler-after-render.png";
+import osUsage from "../../assets/paliascheduler-os-usage.png";
 
 const PaliaSchedulerPage = () => {
   return (
@@ -27,6 +27,7 @@ const PaliaSchedulerPage = () => {
             <h2 id="overview" className="text-3xl mt-2 scroll-mt-24">
               Overview
             </h2>
+            <hr></hr>
             <p>
               Palia Scheduler allows users to schedule in-game activities to be
               notified when they're about to go live.
@@ -36,6 +37,7 @@ const PaliaSchedulerPage = () => {
           <h2 id="screenshots" className="text-3xl mt-2 mb-4 scroll-mt-24">
             Screenshots
           </h2>
+          <hr></hr>
 
           <div className="space-y-2">
             <h3 id="scheduling" className="text-2xl mt-2 scroll-mt-24">
@@ -86,18 +88,30 @@ const PaliaSchedulerPage = () => {
           <h2 id="technical-notes" className="text-3xl mt-2 mb-4 scroll-mt-24">
             Technical Notes
           </h2>
+          <hr></hr>
 
           <div className="space-y-2">
             <h3 id="web-scraping" className="text-2xl mt-2 scroll-mt-24">
               Web Scraping
             </h3>
             <p>
-              In order to collect all the data and images for the website, I downloaded the raw index.html file from the palia wiki site and used Python with BeautifulSoup to run a script which extracted the names, descriptions, locations, and image URLs. In the script, all the data was converted to a JSON object which is stored on the client. There are a relatively small number of activites and new ones don't get added frequently to the game so, I didn't see the need to create a script that scrapes and updates the data automatically or to store the data on a server.
+              In order to collect all the data and images for the website, I
+              downloaded the raw index.html file from the palia wiki site and
+              used Python with BeautifulSoup to run a script which extracted the
+              names, descriptions, locations, and image URLs. In the script, all
+              the data was converted to a JSON object which is stored on the
+              client. There are a relatively small number of activites and new
+              ones don't get added frequently to the game so, I didn't see the
+              need to create a script that scrapes and updates the data
+              automatically or to store the data on a server.
             </p>
           </div>
 
           <div className="space-y-2">
-            <h3 id="schedule-item-collision" className="text-2xl mt-2 scroll-mt-24">
+            <h3
+              id="schedule-item-collision"
+              className="text-2xl mt-2 scroll-mt-24"
+            >
               Schedule Item Collision
             </h3>
             <p>
@@ -125,7 +139,10 @@ const PaliaSchedulerPage = () => {
           </div>
 
           <div className="space-y-2">
-            <h3 id="optimizing-list-rendering" className="text-2xl mt-2 scroll-mt-24">
+            <h3
+              id="optimizing-list-rendering"
+              className="text-2xl mt-2 scroll-mt-24"
+            >
               Optimizing list rendering
             </h3>
             <p>
@@ -138,7 +155,9 @@ const PaliaSchedulerPage = () => {
               render the list items in view, decreasing the list's render time
               by 98%.
             </p>
-            <p><em>Before</em></p>
+            <p>
+              <em>Before</em>
+            </p>
             <img
               src={beforeInp}
               loading="lazy"
@@ -149,7 +168,9 @@ const PaliaSchedulerPage = () => {
               loading="lazy"
               alt="A screenshot of the google chrome developer tools react profiler tab showing the List component rendering after 282ms"
             />
-            <p><em>After</em></p>
+            <p>
+              <em>After</em>
+            </p>
             <img
               src={afterInp}
               loading="lazy"
@@ -163,19 +184,40 @@ const PaliaSchedulerPage = () => {
           </div>
 
           <div className="space-y-2">
-            <h3 id="handling-ios-notifications" className="text-2xl mt-2 scroll-mt-24">
+            <h3
+              id="handling-ios-notifications"
+              className="text-2xl mt-2 scroll-mt-24"
+            >
               Handling IOS Notifications (In Progress)
             </h3>
             <p>
-              After launching the palia scheduler, I noticed more users visiting the website on mobile devices, and more specifically IOS, than I had expected.
+              After launching the palia scheduler, I noticed more users visiting
+              the website on mobile devices, and more specifically IOS, than I
+              had expected.
             </p>
             <img
               src={osUsage}
               loading="lazy"
               alt="A screenshot of the vercel analytics page for the palia scheduler website. The Devices and Operating Systems sections are highlighted showing high mobile and IOS usage"
             />
-            <p>My initial assumption was that people would use the website on their desktops, maybe on a second monitor or in the background, while playing the game. However, Palia is cross platform and can be played on Xbox, PlayStation, Nintendo Switch, etc. Players using these platforms might find it easier to use the site on their phone while playing the game. Currently, IOS users aren't able to receive notifications from the website due to my implementation.</p>
-            <p>Enabling and sending notifications on IOS is different than enabling and sending notifications on a web browser as Apple requires notifications for IOS to go through the Apple Push Service. To do this, I'll have to use a server to handle sending notifications through APS. I am currently working on implementing this.</p>
+            <p>
+              My initial assumption was that people would use the website on
+              their desktops, maybe on a second monitor or in the background,
+              while playing the game. However, Palia is cross platform and can
+              be played on Xbox, PlayStation, Nintendo Switch, etc. Players
+              using these platforms might find it easier to use the site on
+              their phone while playing the game. Currently, IOS users aren't
+              able to receive notifications from the website due to my
+              implementation.
+            </p>
+            <p>
+              Enabling and sending notifications on IOS is different than
+              enabling and sending notifications on a web browser as Apple
+              requires notifications for IOS to go through the Apple Push
+              Service. To do this, I'll have to use a server to handle sending
+              notifications through APS. I am currently working on implementing
+              this.
+            </p>
           </div>
         </article>
 
