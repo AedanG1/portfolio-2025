@@ -1,4 +1,7 @@
 import ProjectCardLg from "./ProjectCardLg";
+import meshHero from "../../assets/mesh-chat-hero.png"
+import paliaHero from "../../assets/paliascheduler-hero.png"
+import bjjvsHero from "../../assets/bjjvs-hero.png"
 
 const ProjectsGrid = () => {
     return (
@@ -7,7 +10,7 @@ const ProjectsGrid = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <ProjectCardLg 
                     link="/projects/meshchat"
-                    img={"/mesh-chat-hero.png"}
+                    img={meshHero}
                     alt="A screenshot of the mesh topology of the mesh chat app"
                     dateType="2026 · personal project"
                     title="Mesh Chat"
@@ -18,7 +21,7 @@ const ProjectsGrid = () => {
                 />
                 <ProjectCardLg 
                     link="/projects/paliascheduler"
-                    img={"/paliascheduler-hero.png"}
+                    img={paliaHero}
                     alt="A screenshot of the palia scheduler app"
                     dateType="2025 · personal project"
                     title="Palia Scheduler"
@@ -30,7 +33,7 @@ const ProjectsGrid = () => {
                 />
                 <ProjectCardLg 
                     link="/projects/bjjvs"
-                    img={"/bjjvs-hero.png"}
+                    img={bjjvsHero}
                     alt="A screenshot of a video sharing web app"
                     dateType="2025 · personal project"
                     title="Video Sharing Web App"

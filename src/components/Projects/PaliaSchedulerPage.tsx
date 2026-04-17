@@ -1,4 +1,13 @@
 import Icons from "../Icons/Icons";
+import hero from "../../assets/paliascheduler-hero.png"
+import scheduling from "../../assets/paliascheduler-scheduling.png"
+import map from "../../assets/paliascheduler-map.png"
+import notification from "../../assets/paliascheduler-notification.png"
+import beforeInp from "../../assets/paliascheduler-before-inp.png"
+import beforeRender from "../../assets/paliascheduler-before-render.png"
+import afterInp from "../../assets/paliascheduler-after-inp.png"
+import afterRender from "../../assets/paliascheduler-after-render.png"
+import osUsage from "../../assets/paliascheduler-os-usage.png"
 
 const PaliaSchedulerPage = () => {
   return (
@@ -11,7 +20,8 @@ const PaliaSchedulerPage = () => {
         <article className="basis-3/4 space-y-8">
           <div className="space-y-2">
             <img
-              src="/paliascheduler-hero.png"
+              src={hero}
+              loading="lazy"
               alt="A screenshot of the homepage for a Video Sharing app. Shows a grid of videos"
             />
             <h2 id="overview" className="text-3xl mt-2 scroll-mt-24">
@@ -32,7 +42,8 @@ const PaliaSchedulerPage = () => {
               Scheduling
             </h3>
             <img
-              src="/paliascheduler-scheduling.png"
+              src={scheduling}
+              loading="lazy"
               alt="A screenshot of the palia scheduler interface."
             />
             <p>
@@ -46,7 +57,8 @@ const PaliaSchedulerPage = () => {
               Locations
             </h3>
             <img
-              src="/paliascheduler-map.png"
+              src={map}
+              loading="lazy"
               alt="A screenshot of the palia scheduler map modal."
             />
             <p>
@@ -60,7 +72,8 @@ const PaliaSchedulerPage = () => {
               Notifications
             </h3>
             <img
-              src="/paliascheduler-notification.png"
+              src={notification}
+              loading="lazy"
               alt="A screenshot of the palia scheduler interface with a google chrome notification in the top right."
             />
             <p>
@@ -127,20 +140,24 @@ const PaliaSchedulerPage = () => {
             </p>
             <p><em>Before</em></p>
             <img
-              src="/paliascheduler-before-inp.png"
+              src={beforeInp}
+              loading="lazy"
               alt="A screenshot of the google chrome developer tools performance tab showing an INP of 360ms"
             />
             <img
-              src="/paliascheduler-before-render.png"
+              src={beforeRender}
+              loading="lazy"
               alt="A screenshot of the google chrome developer tools react profiler tab showing the List component rendering after 282ms"
             />
             <p><em>After</em></p>
             <img
-              src="/paliascheduler-after-inp.png"
+              src={afterInp}
+              loading="lazy"
               alt="A screenshot of the google chrome developer tools performance tab showing an INP of 72ms"
             />
             <img
-              src="/paliascheduler-after-render.png"
+              src={afterRender}
+              loading="lazy"
               alt="A screenshot of the google chrome developer tools react profiler tab showing the List component rendering after 5.4ms"
             />
           </div>
@@ -153,7 +170,8 @@ const PaliaSchedulerPage = () => {
               After launching the palia scheduler, I noticed more users visiting the website on mobile devices, and more specifically IOS, than I had expected.
             </p>
             <img
-              src="/paliascheduler-os-usage.png"
+              src={osUsage}
+              loading="lazy"
               alt="A screenshot of the vercel analytics page for the palia scheduler website. The Devices and Operating Systems sections are highlighted showing high mobile and IOS usage"
             />
             <p>My initial assumption was that people would use the website on their desktops, maybe on a second monitor or in the background, while playing the game. However, Palia is cross platform and can be played on Xbox, PlayStation, Nintendo Switch, etc. Players using these platforms might find it easier to use the site on their phone while playing the game. Currently, IOS users aren't able to receive notifications from the website due to my implementation.</p>
