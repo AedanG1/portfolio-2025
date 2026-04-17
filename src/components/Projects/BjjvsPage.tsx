@@ -9,7 +9,7 @@ import editVideo from "../../assets/bjjvs-edit-video.png";
 
 const BjjvsPage = () => {
   return (
-    <main className="space-y-20 mb-40">
+    <main className="space-y-20 mb-100">
       <header className="space-y-2">
         <p>2024 · personal project</p>
         <h1 className="text-4xl font-semibold w-full">Video Sharing Web App</h1>
