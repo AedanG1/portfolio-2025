@@ -24,8 +24,8 @@ const ProjectCardSm = ({link, img, alt, dateType, title, stackArr, desc}: Projec
         shadow-md shadow-neutral-300 dark:shadow-neutral-900 transition ease-in-out
         flex flex-col md:flex-row gap-4 group
         ">
-            <div className="basis-2/5 overflow-hidden">
-                <img src={img} alt={alt} className="group-hover:scale-105 transition ease-in-out" />
+            <div className="basis-2/5 h-[144px] shrink-0 overflow-hidden">
+                <img src={img} alt={alt} className="w-full h-full object-cover group-hover:scale-105 transition ease-in-out" />
             </div>
             <div className="space-y-1 basis-3/5">
                 <p className="text-sm">{dateType}</p>
