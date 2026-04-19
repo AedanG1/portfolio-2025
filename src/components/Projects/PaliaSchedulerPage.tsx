@@ -34,6 +34,28 @@ const PaliaSchedulerPage = () => {
             </p>
           </div>
 
+          <div className="space-y-2">
+            <h3 id="design-rationale" className="text-2xl mt-2 scroll-mt-24">
+              Design Rationale
+            </h3>
+            <p>
+              Palia has an in-game day/night cycle which is 24 times faster than our real-life
+              day/night cycle. Every Palia day there are a variety of events that occur at specific times.
+              Currently, players have to refer to third-party sources (like the wiki) in order to know when
+              these events take place. They must also constantly pay attention to the in-game time if there's
+              an event coming up that they want to take part in, as events can only last a couple of real-life minutes.
+              It can be frustrating for a player to have to wait another real-life hour to attend an event 
+              because they lost track of time.
+            </p>
+            <p>
+              In order to help players never miss an event they want to attend, I designed and developed this web
+              app to notify players where and when those events are going to take place. The user can see the current in-game
+              time in relation to the events on their schedule via a live time-indicator bar, making it easy for users to 
+              see how much time they have before each event. Because there are so many events in Palia, the schedule also 
+              acts as a way to keep track of all the events <em>to</em> attend.
+            </p>
+          </div>
+
           <h2 id="screenshots" className="text-3xl mt-2 mb-4 scroll-mt-24">
             Screenshots
           </h2>
@@ -250,6 +272,14 @@ const PaliaSchedulerPage = () => {
                   className="transition duration-200 hover:text-sky-400/80"
                 >
                   Overview
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#design-rationale"
+                  className="ml-6 transition duration-200 hover:text-sky-400/80"
+                >
+                  ⌙ Design Rationale
                 </a>
               </li>
               <li>
