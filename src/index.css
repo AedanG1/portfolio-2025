@@ -11,6 +11,6 @@
 	}
 }
 
-p {
+p, ul, li {
 	@apply text-neutral-500 dark:text-neutral-400;
 }

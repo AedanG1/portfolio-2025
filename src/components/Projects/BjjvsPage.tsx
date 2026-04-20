@@ -38,6 +38,42 @@ const BjjvsPage = () => {
               MediaConvert saving storage space.
             </p>
           </div>
+          <div className="space-y-2">
+            <h3 id="design-rationale" className="text-2xl mt-2 scroll-mt-24">
+              Design Rationale
+            </h3>
+            <p>
+              Right now, it can be hard for coaches to get the information and
+              knowledge they want to their students. This can be for a number of
+              reasons:
+            </p>
+            <ul className="list-disc pl-5">
+              <li>
+                Students rarely attend every class and can consequently miss
+                critical information, concepts, and techniques.
+              </li>
+              <li>
+                Students end up watching a variety of content from different
+                people who are at different skill levels who believe in
+                different ways of doing things. This can lead to gaps in knowledge and understanding
+                or can lead to students learning bad practices.
+              </li>
+              <li>
+                Students and coaches don't have a dedicated or clear way to
+                communicate and ask/answer questions outside of class.
+              </li>
+            </ul>
+            <p>
+              The goal of this app is to give more structure to the teaching and
+              learning relationship that coaches and students can have outside
+              the gym. In education, teachers give students access to recorded
+              lectures, recorded labs, lecture notes, lecture slides, problem
+              sets, etc. in order to teach. Most gyms at the moment don't offer
+              any learning resources outside of the hour long class that runs
+              everyday. With this video sharing platform, coaches can offer more
+              resources for their students to learn and succeed.
+            </p>
+          </div>
           <h2 id="screenshots" className="text-3xl mt-2 mb-4 scroll-mt-24">
             Screenshots
           </h2>
@@ -157,6 +193,14 @@ const BjjvsPage = () => {
                   className="transition duration-200 hover:text-sky-400/80"
                 >
                   Overview
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#design-rationale"
+                  className="ml-6 transition duration-200 hover:text-sky-400/80"
+                >
+                  ⌙ Design Rationale
                 </a>
               </li>
               <li>
