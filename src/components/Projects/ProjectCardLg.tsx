@@ -23,7 +23,7 @@ const ProjectCardLg = ({link, img, alt, dateType, title, stackArr, desc}: Projec
             bg-neutral-100/50 dark:bg-neutral-700/50 
             shadow-md shadow-neutral-300 dark:shadow-neutral-900 transition ease-in-out
             flex flex-col gap-4 group flex-1 h-full">
-            <div className="h-[300px] shrink-0 overflow-hidden">
+            <div className="h-75 shrink-0 overflow-hidden">
                 <img src={img} alt={alt} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition ease-in-out"></img>
             </div>
             <div className="space-y-1">
