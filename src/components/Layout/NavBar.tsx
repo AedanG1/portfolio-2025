@@ -12,8 +12,8 @@ const NavBar = () => {
     ]
 
     return (
-        <nav className="z-50 w-full max-w-7xl mx-auto bg-transparent flex flex-row items-center px-2 py-4 md:py-8c
-        fixed top-0 left-0 right-0 h-24">
+        <nav className="z-50 w-full max-w-7xl mx-auto bg-slate-700/5 backdrop-blur-sm flex flex-row items-center px-4 md:py-8c
+        fixed top-0 left-0 right-0 mt-8 h-12 rounded-lg inset-shadow-lg border border-slate-400/40">
             <div className="w-fit space-x-1 hidden md:block ml-auto">
                 {routes.map(item => (
                     <NavItem key={item.name} route={item.route} name={item.name} />

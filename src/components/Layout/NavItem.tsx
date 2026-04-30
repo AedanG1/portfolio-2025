@@ -21,7 +21,7 @@ const NavItem = ({ route, name }: NavItemProps) => {
 			hover:text-neutral-800 dark:hover:text-neutral-100
 			${activeStyles}`}
 		>
-			<span className="relative font-semibold z-10">{name}</span>
+			<span className="relative z-10">{name}</span>
 			{isActive && (
 				<motion.div 
 					layoutId="navUnderline"
