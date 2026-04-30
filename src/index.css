@@ -2,6 +2,15 @@
 
 @theme {
 	--font-display: "DM Sans", "san-serif";
+  --inset-shadow-sm: inset 0 0 8px 2px rgba(0, 0, 0, 0.3);
+  --inset-shadow-md: inset 0 0 12px 4px rgba(0, 0, 0, 0.4);
+  --inset-shadow-lg: inset 0 0 20px 8px #bad6f707;
+	--inset-shadow-bright: inset 0 0 40px 8px #bad6f720;
+	--color-moon: #98c0ef;
+	--color-moon-light: #d8ecf8;
+	--color-body-normal: #c8d4eac7;
+	--color-body-loud: #c7d3ea;
+	--color-body-muted: #c7d3eaa3;
 }
 
 @layer base {
@@ -10,7 +19,7 @@
 	}
 
 	body {
-		@apply text-neutral-800 dark:text-neutral-200;
+		@apply text-slate-200;
 		font-family: var(--font-display);
 		background: linear-gradient(
 			180deg,
@@ -20,10 +29,74 @@
 		);
 		min-height: 100vh; 
 	}
+
+	p, ul, li {
+		@apply text-body-normal;
+	}
 }
 
-p, ul, li {
-	@apply text-neutral-500 dark:text-neutral-400;
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes border-spin {
+  to { --angle: 360deg; }
+}
+
+@layer utilities {
+  .animated-gradient {
+    position: relative;
+    z-index: 0;
+  }
+
+  .animated-gradient::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: conic-gradient(
+      from var(--angle),
+      transparent 75%,
+      #6884ab 88%,
+      #84a1ca 94%,
+      #6884ab 96%,
+      transparent 100%
+    );
+    animation: border-spin 12s linear infinite;
+		animation-delay: var(--spin-offset, 0s);
+    z-index: -1;
+
+    /* Mask out the interior, keep only the border ring */
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    padding: 1px; /* must match your inset value */
+  }
+
+  .animated-gradient::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    background: inherit;
+    z-index: -1;
+  }
+
+	/*
+  .glow-hover {
+    border: 1px solid rgba(195, 203, 255, 0.3);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .glow-hover:hover {
+    border-color: rgba(160, 176, 255, 0.9);
+    box-shadow: 0 0 16px rgba(153, 187, 255, 0.35),
+                inset 0 0 12px rgba(140, 120, 255, 0.07);
+  }
+	*/
 }
 
 .star-layer {
@@ -42,5 +115,5 @@ p, ul, li {
 	height: 3px;
 	background: white;
 	border-radius: 50%;
-	opacity: 0.7;
+	opacity: 0.25;
 }

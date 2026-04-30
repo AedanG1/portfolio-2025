@@ -1,4 +1,5 @@
 import { NavLink } from "react-router";
+import { useState, useEffect } from "react";
 
 interface ProjectCardSmProps {
   link: string;
@@ -19,6 +20,11 @@ const ProjectCardSm = ({
   stackArr,
   desc,
 }: ProjectCardSmProps) => {
+  const [offset, setOffset] = useState("0s");
+  useEffect(() => {
+    setOffset(`-${(Math.random() * 42069).toFixed(2)}s`);
+  }, []);
+
   const techStack = stackArr.map((item) => (
     <li className="text-sm border border-neutral-400 px-2">{item}</li>
   ));
@@ -27,13 +33,14 @@ const ProjectCardSm = ({
 
   const CardContent = (
     <div
-      className="w-full h-fit py-4 px-4 border border-neutral-400 
-        bg-neutral-100/50 dark:bg-neutral-700/50 
-        shadow-md shadow-neutral-300 dark:shadow-neutral-900 transition ease-in-out
+      className="animated-gradient glow-hover w-full h-fit py-4 px-4 rounded-xl  
+      bg-slate-600/5 inset-shadow-lg hover:inset-shadow-bright backdrop-blur-xs border border-slate-400/40
+       shadow-slate-300 dark:shadow-slate-900 transition ease-in-out
         flex flex-col md:flex-row gap-4 group
         "
+      style={{"--spin-offset": offset} as React.CSSProperties}
     >
-      <div className="basis-2/5 h-36 shrink-0 overflow-hidden">
+      <div className="rounded-lg basis-2/5 h-36 shrink-0 overflow-hidden">
         <img
           src={img}
           alt={alt}

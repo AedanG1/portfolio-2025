@@ -49,7 +49,7 @@ const SkillSummary = () => {
                 ))}
             </div>
             <div className="flex flex-row items-center justify-center gap-4 w-full md:w-1/2 h-40 
-                bg-neutral-100/50 dark:bg-neutral-700/50 
+                bg-white/5 backdrop-blur-xs 
                 border border-neutral-400 place-self-center py-4 px-4">
                 <AnimatePresence mode="wait">
                         {options
