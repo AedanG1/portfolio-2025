@@ -5,7 +5,7 @@ import Icons from "../Icons/Icons";
 const Home = () => {
 
     return(
-        <main className="mb-64 space-y-24">
+        <section className="space-y-24">
             <header className="flex md:flex-row">
                 <div className="md:w-1/2">
                     <h1 className="font-primary text-3xl text-neutral-500 dark:text-neutral-400">Aedan Gallivan</h1>
@@ -23,7 +23,7 @@ const Home = () => {
             </header>
             <SkillSummary />
             <ProjectsSummary />
-        </main>
+        </section>
     )
 };
 

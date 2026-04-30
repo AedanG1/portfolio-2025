@@ -5,7 +5,7 @@ import { bjjvsHero } from "@assets/bjjvs";
 
 const ProjectsGrid = () => {
   return (
-    <div className="space-y-12 mb-40">
+    <div className="space-y-12">
       <h1 className="text-4xl font-semibold w-full">Projects</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <ProjectCardLg

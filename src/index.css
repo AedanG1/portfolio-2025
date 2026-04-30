@@ -5,8 +5,12 @@
 }
 
 @layer base {
+	html {
+		background-color: #050810;
+	}
+
 	body {
-		@apply max-w-6xl mx-auto  text-neutral-800 dark:text-neutral-200 px-2;
+		@apply text-neutral-800 dark:text-neutral-200;
 		font-family: var(--font-display);
 		background: linear-gradient(
 			180deg,
