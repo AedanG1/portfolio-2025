@@ -1,5 +1,5 @@
 import Icons from "../Icons/Icons";
-import hero from "../../assets/mesh-chat-hero.png";
+import { meshHero } from "@assets/meshchat";
 
 const MeshChatPage = () => {
   return (
@@ -12,7 +12,7 @@ const MeshChatPage = () => {
         <article className="basis-3/4 space-y-8">
           <div className="space-y-2">
             <img
-              src={hero}
+              src={meshHero}
               loading="lazy"
               alt="An image of the n-to-n mesh topology of the Mesh Chat project"
             />

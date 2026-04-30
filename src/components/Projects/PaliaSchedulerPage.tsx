@@ -1,13 +1,5 @@
 import Icons from "../Icons/Icons";
-import hero from "../../assets/paliascheduler-hero.png";
-import scheduling from "../../assets/paliascheduler-scheduling.png";
-import map from "../../assets/paliascheduler-map.png";
-import notification from "../../assets/paliascheduler-notification.png";
-import beforeInp from "../../assets/paliascheduler-before-inp.png";
-import beforeRender from "../../assets/paliascheduler-before-render.png";
-import afterInp from "../../assets/paliascheduler-after-inp.png";
-import afterRender from "../../assets/paliascheduler-after-render.png";
-import osUsage from "../../assets/paliascheduler-os-usage.png";
+import { paliaHero, afterInp, afterRender, beforeInp, beforeRender, map, notification, osUsage, scheduling } from "@assets/paliascheduler";
 
 const PaliaSchedulerPage = () => {
   return (
@@ -20,7 +12,7 @@ const PaliaSchedulerPage = () => {
         <article className="basis-3/4 space-y-8">
           <div className="space-y-2">
             <img
-              src={hero}
+              src={paliaHero}
               loading="lazy"
               alt="A screenshot of the homepage for a Video Sharing app. Shows a grid of videos"
             />

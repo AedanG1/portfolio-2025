@@ -43,7 +43,6 @@ const SkillSummary = () => {
                     >
                         {option.name.charAt(0).toUpperCase() + option.name.slice(1)}
                         {selectedSkill === option.name && <motion.div
-                            // layoutId="skillUnderline"
                             className="absolute w-full h-full top-0 left-0 right-0 border border-neutral-400" 
                         ></motion.div>}
                     </button>

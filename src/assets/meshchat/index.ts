@@ -1,1 +1,1 @@
-export { default as hero } from './mesh-chat-hero.png';
+export { default as meshHero } from './mesh-chat-hero.png';

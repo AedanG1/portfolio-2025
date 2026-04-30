@@ -2,7 +2,7 @@ export { default as afterInp } from './paliascheduler-after-inp.png';
 export { default as afterRender } from './paliascheduler-after-render.png';
 export { default as beforeInp } from './paliascheduler-before-inp.png';
 export { default as beforeRender } from './paliascheduler-before-render.png';
-export { default as hero } from './paliascheduler-hero.png';
+export { default as paliaHero } from './paliascheduler-hero.png';
 export { default as map } from './paliascheduler-map.png';
 export { default as notification } from './paliascheduler-notification.png';
 export { default as osUsage } from './paliascheduler-os-usage.png';

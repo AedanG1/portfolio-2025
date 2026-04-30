@@ -6,11 +6,37 @@
 
 @layer base {
 	body {
-		@apply max-w-6xl mx-auto bg-neutral-50 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 px-2;
+		@apply max-w-6xl mx-auto  text-neutral-800 dark:text-neutral-200 px-2;
 		font-family: var(--font-display);
+		background: linear-gradient(
+			180deg,
+			#050810 0%,   
+			#0b162a 50%,  
+			#17263d 100%  
+		);
+		min-height: 100vh; 
 	}
 }
 
 p, ul, li {
 	@apply text-neutral-500 dark:text-neutral-400;
+}
+
+.star-layer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	pointer-events: none;
+	z-index: 0;
+}
+
+.star {
+	position: absolute;
+	width: 3px;
+	height: 3px;
+	background: white;
+	border-radius: 50%;
+	opacity: 0.7;
 }

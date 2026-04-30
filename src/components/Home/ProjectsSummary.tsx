@@ -1,7 +1,7 @@
 import ProjectCardSm from "../Projects/ProjectCardSm";
-import meshHero from "../../assets/mesh-chat-hero.png"
-import paliaHero from "../../assets/paliascheduler-hero.png"
-import bjjvsHero from "../../assets/bjjvs-hero.png"
+import { meshHero } from "@assets/meshchat"
+import { paliaHero } from "@assets/paliascheduler"
+import { bjjvsHero } from "@assets/bjjvs"
 
 const ProjectsSummary = () => {
 

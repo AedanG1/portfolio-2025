@@ -1,11 +1,5 @@
 import Icons from "../Icons/Icons";
-import hero from "../../assets/bjjvs-hero.png";
-import filter from "../../assets/bjjvs-filter.png";
-import upload from "../../assets/bjjvs-upload.png";
-import aws from "../../assets/aws.png";
-import thumbnail from "../../assets/bjjvs-thumbnail.png";
-import editTags from "../../assets/bjjvs-edit-tags.png";
-import editVideo from "../../assets/bjjvs-edit-video.png";
+import { bjjvsHero, aws, editTags, editVideo, filter, thumbnail, upload} from "@assets/bjjvs"
 
 const BjjvsPage = () => {
   return (
@@ -18,7 +12,7 @@ const BjjvsPage = () => {
         <article className="basis-3/4 space-y-8">
           <div className="space-y-2">
             <img
-              src={hero}
+              src={bjjvsHero}
               loading="lazy"
               alt="A screenshot of the homepage for a Video Sharing app. Shows a grid of videos"
             />
