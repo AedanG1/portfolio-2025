@@ -1,8 +1,14 @@
 @import "tailwindcss";
 
+@font-face {
+	font-family: Glass;
+	src: url("../src/assets/Fonts/Glass.ttf");
+}
+
 @theme {
 	--font-display: "DM Sans", "san-serif";
 	--font-nav-button: "Space Mono", "san-serif";
+	--font-terminal: Glass, "san-serif";
 	--color-nav-button-subtle: #A2A2A2;
 	--color-nav-button-loud: #BCFFC1;
 	--color-nav-button-louder: #00FF1E;
