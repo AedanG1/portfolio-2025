@@ -26,7 +26,7 @@ const ProjectCardSm = ({
   }, []);
 
   const techStack = stackArr.map((item) => (
-    <li className="text-sm border border-slate-400 px-2">{item}</li>
+    <li key={item} className="text-sm border border-slate-400 px-2">{item}</li>
   ));
 
   const isExternal = link.startsWith("http");

@@ -7,7 +7,12 @@ const ProjectsSummary = () => {
 
     return (
         <section className="flex flex-col md:flex-row mt-44 space-y-6 md:space-y-0">
-            <h3 className="text-5xl font-semibold w-full md:w-4/6">Projects</h3>
+          <span className="absolute w-full md:w-4/6 blur bg-linear-to-b from-moon/20 to-moon-light/20 bg-clip-text text-transparent text-5xl font-semibold">
+            Projects
+          </span>
+          <h3 className="relative w-full md:w-4/6 bg-linear-to-b from-moon to-moon-light bg-clip-text text-transparent text-5xl font-semibold">
+            Projects
+          </h3>
             <div className="w-full md:w-full flex flex-col gap-4">
                 <ProjectCardSm
                     link="/projects/meshchat"

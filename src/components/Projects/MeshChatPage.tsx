@@ -1,4 +1,4 @@
-import Icons from "../Icons/Icons";
+import Icons from "../../assets/Icons/Icons";
 import { meshHero } from "@assets/meshchat";
 
 const MeshChatPage = () => {

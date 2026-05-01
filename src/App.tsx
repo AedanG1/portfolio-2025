@@ -4,7 +4,6 @@ import Home from "./components/Home/Home"
 import { AnimatePresence } from "motion/react"
 import PageWrapper from "./components/Layout/PageWrapper"
 import ProjectsGrid from "./components/Projects/ProjectsGrid"
-import Contact from "./components/Contact/Contact"
 import BjjvsPage from "./components/Projects/BjjvsPage"
 import PaliaSchedulerPage from "./components/Projects/PaliaSchedulerPage"
 import MeshChatPage from "./components/Projects/MeshChatPage"
@@ -47,13 +46,6 @@ function App() {
           <AnimatePresence mode="wait">
             <PageWrapper key={location.pathname}>
               <MeshChatPage />
-            </PageWrapper>
-          </AnimatePresence>
-        }/>
-        <Route path="/contact" element={
-          <AnimatePresence mode="wait">
-            <PageWrapper key={location.pathname}>
-              <Contact />
             </PageWrapper>
           </AnimatePresence>
         }/>

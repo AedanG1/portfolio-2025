@@ -1,14 +1,13 @@
 import DropdownMenu from "../DropDownMenu";
 import NavItem from "./NavItem"
 import { Link } from "react-router";
-import Icons from "../Icons/Icons";
+import Icons from "../../assets/Icons/Icons";
 
 const NavBar = () => {
 
     const routes:{route: string; name: string}[] = [
         { route: "/", name: "Home" },
         { route: "/projects", name: "Projects" },
-        { route: "/Contact", name: "Contact" },
     ]
 
     return (

@@ -1,4 +1,4 @@
-import Icons from "../Icons/Icons";
+import Icons from "../../assets/Icons/Icons";
 import { bjjvsHero, aws, editTags, editVideo, filter, thumbnail, upload} from "@assets/bjjvs"
 
 const BjjvsPage = () => {

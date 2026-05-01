@@ -1,4 +1,4 @@
-import Icons from "../Icons/Icons";
+import Icons from "../../assets/Icons/Icons";
 import { paliaHero, afterInp, afterRender, beforeInp, beforeRender, map, notification, osUsage, scheduling } from "@assets/paliascheduler";
 
 const PaliaSchedulerPage = () => {

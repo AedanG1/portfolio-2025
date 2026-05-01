@@ -1,6 +1,7 @@
 import { Outlet } from "react-router";
 import NavBar from "./NavBar";
 import Starfield from "./Starfield";
+import SpaceshipNav from "../SpaceshipNav";
 
 const Layout = () => {
     return (
@@ -8,6 +9,7 @@ const Layout = () => {
             <Starfield />
             <div className="relative z-10">
                 <NavBar />
+                <SpaceshipNav />
                 <div className="mt-32">
                     <Outlet />
                 </div>
