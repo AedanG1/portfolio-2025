@@ -6,9 +6,10 @@
 }
 
 @theme {
-	--font-display: "DM Sans", "san-serif";
-	--font-nav-button: "Space Mono", "san-serif";
-	--font-terminal: Glass, "san-serif";
+	--font-display: "DM Sans", "sans-serif";
+	--font-nav-button: "Space Mono", "sans-serif";
+	--font-worn: "Syne Mono", "sans-serif";
+	--font-terminal: Glass, "sans-serif";
 	--color-nav-button-subtle: #A2A2A2;
 	--color-nav-button-loud: #BCFFC1;
 	--color-nav-button-louder: #00FF1E;
@@ -66,7 +67,16 @@
   to { --angle: 360deg; }
 }
 
+@keyframes ticker-scroll {
+	from { transform: translateX(0%); }
+	to { transform: translateX(-50%); }
+}
+
 @layer utilities {
+	.animated-ticker {
+		animation: ticker-scroll 360s linear infinite;	
+	}
+
   .animated-gradient {
     position: relative;
     z-index: 0;

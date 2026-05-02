@@ -35,7 +35,9 @@ const GitHubActivityTicker = () => {
         setEvents(data);
         setError(null);
       } catch (err) {
+        // if the component unmounted before request was complete, don't tell user
         if (err instanceof DOMException && err.name === "AbortError") return;
+        // any other error, tell the user
         setError(err instanceof Error ? err.message : "Failed to load activity");
       }
     };
@@ -45,14 +47,21 @@ const GitHubActivityTicker = () => {
   }, []);
 
   return (
-    <div className="font-terminal text-nav-button-louder">
+    <div className="font-terminal text-nav-button-louder bg-black py-2 rounded-lg
+    border border-t-[#212121] border-l-[#212121] border-b-0 border-r-0
+    flex-1 min-w-0 overflow-hidden flex flex-row items-center group">
       {error && <span>Couldn't load GitHub activity: {error}</span>}
       {!error && events.length === 0 && <span>Loading...</span>}
-      {events.map((event) => (
-        <div key={event.id}>
-          {event.type}: {event.repo.name} {event.created_at}
-        </div>
-      ))}
+      <div className="flex flex-row gap-12 w-max animated-ticker group-hover:[animation-play-state:paused]">
+        {[...events, ...events].map((event) => {
+          const createdAtAEST = new Date(event.created_at).toLocaleDateString("en-AU", { timeZone: "Australia/Brisbane" });
+          return (
+            <div key={event.id} className="whitespace-nowrap">
+              {event.type}: {event.repo.name} - {createdAtAEST}
+            </div>
+          )
+        })}
+      </div>
     </div>
   );
 };
