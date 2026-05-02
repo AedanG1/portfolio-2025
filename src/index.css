@@ -83,7 +83,7 @@
 
 @layer utilities {
 	.animated-ticker {
-		animation: ticker-scroll 360s linear infinite;	
+		animation: ticker-scroll 111s linear infinite;	
 	}
 
   .animated-gradient {
@@ -113,7 +113,7 @@
       linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
     mask-composite: exclude;
-    padding: 1px; /* must match your inset value */
+    padding: 1px;
   }
 
   .animated-gradient::after {
@@ -209,4 +209,82 @@
   bottom: 1px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.ticker-switch__on {
+  position: relative;
+  background: linear-gradient(
+    to top,
+    #460404 7%,
+    #460404 14%,
+    #BE0707 19%,
+    #BD0707 47%,
+    #900D0D 54%,
+    #900D0D 88%,
+    #BD0606 93%
+  );
+}
+
+.ticker-switch__on::before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 2px;
+  height: 8px;
+  background: #FFCFCF;
+  clip-path: polygon(0% 0%, 100% 0%, 70% 100%, 30% 100%);
+  top: 19%;
+  left: 44%;
+}
+
+.ticker-switch__on::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid #FFCFCF;
+  background: transparent;
+  bottom: 24%;
+  left: 28%;
+}
+
+.ticker-switch__off {
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    #BF0606 7%,
+    #BF0606 14%,
+    #450202 19%,
+    #450202 47%,
+    #A80606 54%,
+    #BF0606 88%,
+    #590303 93%
+  );
+}
+
+.ticker-switch__off::before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 2px;
+  height: 7px;
+  background: #735151;
+  clip-path: polygon(0% 0%, 100% 0%, 70% 100%, 30% 100%);
+  top: 25%;
+  left: 44%;
+}
+
+.ticker-switch__off::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid #FFCFCF;
+  background: transparent;
+  bottom: 19%;
+  left: 28%;
 }
