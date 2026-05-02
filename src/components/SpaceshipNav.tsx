@@ -15,7 +15,7 @@ const SpaceshipNav = () => {
   const BOLT_POSITIONS = ["tl", "tr", "bl", "br", "tm", "bm"] as const;
 
   return (
-    <div className="fixed w-full max-w-7xl mx-auto z-50 top-0 left-0 right-0 mt-24 py-2 px-2 
+    <div className="fixed w-full max-w-7xl mx-auto z-50 top-0 left-0 right-0 mt-4 py-2 px-2 
     bg-linear-to-b from-frame-light via-frame-mid via-45% to-frame-dark
     rounded-sm border-2 border-t-frame-border-t border-l-frame-border-l border-r-frame-border-r border-b-frame-border-b">
 

@@ -8,7 +8,7 @@ const Layout = () => {
             <Starfield />
             <div className="relative z-10">
                 <SpaceshipNav />
-                <div className="mt-32">
+                <div className="mt-42">
                     <Outlet />
                 </div>
             </div>
