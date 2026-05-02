@@ -14,10 +14,6 @@ const SpaceshipNav = () => {
 
   return (
     <nav className="z-50 w-full max-w-7xl mx-auto flex flex-row gap-8 items-center fixed top-0 left-0 right-0 mt-24">
-      <span className="font-worn text-nav-button-subtle text-sm flex flex-col items-center">
-        <span>GitHub</span>
-        <span>Activity</span>
-      </span>
       <GitHubActivityTicker />
       <div className="flex flex-row gap-2 ml-auto shrink-0">
         <SpaceshipNavButton text="HOME" route="/"/>
