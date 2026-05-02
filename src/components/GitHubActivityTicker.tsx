@@ -8,6 +8,8 @@ export type GitHubEvent = {
   created_at: string;
 };
 
+const EVENT_AMOUNT = 15;
+
 const GitHubActivityTicker = () => {
   const [events, setEvents] = useState<GitHubEvent[]>([]);
   const [error, setError] = useState<string | null>(null);
@@ -28,7 +30,7 @@ const GitHubActivityTicker = () => {
     const apiCall = async () => {
       try {
         const response = await fetch(
-          "https://api.github.com/users/AedanG1/events/public?per_page=15",
+          `https://api.github.com/users/AedanG1/events/public?per_page=${EVENT_AMOUNT}`,
           { signal: controller.signal }
         );
 
@@ -63,7 +65,7 @@ const GitHubActivityTicker = () => {
 
   return (
     <>
-    <div className="flex flex-row gap-4 items-center -mr-4">
+    <div className="hidden md:flex flex-row gap-4 items-center -mr-4">
       {/* Switch */}
       <button 
       onClick={() => toggleAnimation()}
@@ -95,9 +97,9 @@ const GitHubActivityTicker = () => {
       </span>
 
     </div>
-    <div className="font-terminal text-nav-button-louder bg-black py-2 rounded-lg
+    <div className="hidden font-terminal text-nav-button-louder bg-black py-2 rounded-lg
     border border-t-[#212121] border-l-[#212121] border-b-0 border-r-0
-    flex-1 min-w-0 overflow-hidden flex flex-row items-center">
+    flex-1 min-w-0 overflow-hidden md:flex flex-row items-center">
       {error && <span>Couldn't load GitHub activity: {error}</span>}
       {!error && events.length === 0 && <span>Loading...</span>}
       <div 

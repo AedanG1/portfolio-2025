@@ -35,7 +35,7 @@ const SpaceshipNav = () => {
       <nav className="flex flex-row gap-8 items-center 
       bg-nav-bg-inner py-2 px-4 inset-shadow-dark">
         <GitHubActivityTicker />
-        <div className="flex flex-row gap-2 ml-auto shrink-0">
+        <div className="flex flex-row gap-2 mx-auto md:ml-auto shrink-0">
           <SpaceshipNavButton text="HOME" route="/"/>
           <SpaceshipNavButton text="PROJECTS" route="/projects"/>
           <div className="flex flex-col gap-0.75 justify-center mx-4">
