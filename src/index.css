@@ -10,6 +10,7 @@
 	--font-nav-button: "Space Mono", "sans-serif";
 	--font-worn: "Syne Mono", "sans-serif";
 	--font-terminal: Glass, "sans-serif";
+	--color-nav-bg-inner: #121212;
 	--color-nav-button-subtle: #A2A2A2;
 	--color-nav-button-loud: #BCFFC1;
 	--color-nav-button-louder: #00FF1E;
@@ -22,12 +23,20 @@
 	--color-resume-button-normal: #D4D4D4;
 	--color-resume-button-light: #D16C00;
 	--color-resume-button-dark: #431F00;
+	--color-frame-light: #303030;
+	--color-frame-mid: #242424;
+	--color-frame-dark: #1E1E1E;
+	--color-frame-border-t: #585858;
+	--color-frame-border-l: #484848;
+	--color-frame-border-r: #181818;
+	--color-frame-border-b: #101010;
 	--shadow-nav-button: 
 		0 -1px 1px rgba(255, 255, 255, 0.14),
 	  0 5px 7px rgba(0, 0, 0, 0.24),
 	  0 5px 14px rgba(0, 0, 0, 0.25);
   --inset-shadow-lg: inset 0 0 20px 8px #bad6f707;
 	--inset-shadow-bright: inset 0 0 40px 8px #bad6f720;
+	--inset-shadow-dark: inset 2px 2px 8px 2px rgba(0, 0, 0, 0.4);
 	--color-moon: #98c0ef;
 	--color-moon-light: #d8ecf8;
 	--color-body-normal: #c8d4eac7;
@@ -134,4 +143,70 @@
 	background: white;
 	border-radius: 50%;
 	opacity: 0.25;
+}
+
+.frame-rail {
+	position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: linear-gradient(180deg, #3a3a3a, #222, #3a3a3a);
+}
+
+.frame-rail__left {
+  left: -7px;
+  border-radius: 2px 0 0 2px;
+  border-left: 1px solid #444;
+  border-right: 1px solid #111;
+}
+ 
+.frame-rail__right {
+  right: -7px;
+  border-radius: 0 2px 2px 0;
+  border-left: 1px solid #111;
+  border-right: 1px solid #444;
+}
+
+.frame-bolt {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 32%, #606060, #2e2e2e 55%, #111 100%);
+  border: 1px solid #181818;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 1px 3px rgba(0, 0, 0, 0.8);
+  z-index: 3;
+}
+ 
+.frame-bolt::before,
+.frame-bolt::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.55);
+}
+ 
+.frame-bolt::before { transform: translate(-50%, -50%); }
+.frame-bolt::after  { transform: translate(-50%, -50%) rotate(90deg); }
+ 
+.frame-bolt__tl { top: 2px; left: 2px; }
+.frame-bolt__tr { top: 2px; right: 2px; }
+.frame-bolt__bl { bottom: 2px; left: 2px; }
+.frame-bolt__br { bottom: 2px; right: 2px; }
+ 
+.frame-bolt__tm {
+  top: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+ 
+.frame-bolt__bm {
+  bottom: 1px;
+  left: 50%;
+  transform: translateX(-50%);
 }

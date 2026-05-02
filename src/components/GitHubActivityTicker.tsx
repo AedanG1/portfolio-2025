@@ -65,7 +65,7 @@ const GitHubActivityTicker = () => {
           opacity={0.4}
         />
       </svg>
-      <span className="font-worn text-nav-button-subtle text-sm flex flex-col items-center">
+      <span className="font-worn text-nav-button-subtle text-xs flex flex-col items-center">
         <span>GitHub</span>
         <span>Activity</span>
       </span>

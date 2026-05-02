@@ -13,7 +13,7 @@ const Home = () => {
           <span className="absolute pointer-events-none blur bg-linear-to-b from-moon/30 to-moon-light/30 bg-clip-text text-transparent text-5xl font-semibold py-2">
             Full-Stack Developer<br></br>& Designer
           </span>
-          <h2 className="relative bg-linear-to-b from-moon to-moon-light bg-clip-text text-transparent text-5xl font-semibold py-2">
+          <h2 className=" relative bg-linear-to-b from-moon to-moon-light bg-clip-text text-transparent text-5xl font-semibold py-2">
             Full-Stack Developer<br></br>& Designer
           </h2>
           <p className="text-md mt-4">
@@ -30,7 +30,7 @@ const Home = () => {
             <svg className="absolute pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" viewBox="0 0 160 160" width="200" height="160" xmlns="http://www.w3.org/2000/svg">
               <g transform="matrix(0.966, -0.1, 0.55, 0.433, 80, 80)">
                 <path d="M 0,70 A 65,70 0 0,0 65,0 5,5 0 0,1 75,0 75,70 0 0,1 0,70Z" fill="#98c0ef" opacity="0.6">
-                  <animateTransform attributeName="transform" type="rotate" from="360 0 0" to="0 0 0" dur="4s" repeatCount="indefinite" />
+                  <animateTransform attributeName="transform" type="rotate" from="360 0 0" to="0 0 0" dur="7s" repeatCount="indefinite" />
                 </path>
               </g>
             </svg>
