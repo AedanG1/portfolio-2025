@@ -33,12 +33,12 @@ const ProjectCardSm = ({
 
   const CardContent = (
     <div
-      className="animated-gradient glow-hover w-full h-fit py-4 px-4 rounded-xl  
+      className="animated-border__shine glow-hover w-full h-fit py-4 px-4 rounded-xl  
       bg-slate-600/5 inset-shadow-lg hover:inset-shadow-bright backdrop-blur-xs border border-slate-400/40
        shadow-slate-300 dark:shadow-slate-900 transition ease-in-out
         flex flex-col md:flex-row gap-4 group
         "
-      style={{"--spin-offset": offset} as React.CSSProperties}
+      style={{ "--spin-offset": offset } as React.CSSProperties}
     >
       <div className="rounded-lg basis-2/5 h-36 shrink-0 overflow-hidden">
         <img

@@ -86,12 +86,12 @@
 		animation: ticker-scroll 111s linear infinite;	
 	}
 
-  .animated-gradient {
+  .animated-border__shine {
     position: relative;
     z-index: 0;
   }
 
-  .animated-gradient::before {
+  .animated-border__shine::before {
     content: "";
     position: absolute;
     inset: -1px;
@@ -116,7 +116,7 @@
     padding: 1px;
   }
 
-  .animated-gradient::after {
+  .animated-border__shine::after {
     content: "";
     position: absolute;
     inset: 1px;
@@ -124,6 +124,10 @@
     background: inherit;
     z-index: -1;
   }
+}
+
+.glass-container {
+  @apply backdrop-blur-xs bg-slate-600/5 rounded-xl border border-slate-400/40 shadow-slate-300 dark:shadow-slate-900;
 }
 
 .star-layer {

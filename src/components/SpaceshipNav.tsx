@@ -20,15 +20,15 @@ const SpaceshipNav = () => {
     rounded-sm border-2 border-t-frame-border-t border-l-frame-border-l border-r-frame-border-r border-b-frame-border-b">
 
       {/* left rail */}
-      <span aria-hidden="true" className="frame-rail frame-rail__left"/>
+      <span aria-hidden="true" className="frame-rail frame-rail__left" />
 
       {/* right rail */}
-      <span aria-hidden="true" className="frame-rail frame-rail__right"/>
+      <span aria-hidden="true" className="frame-rail frame-rail__right" />
 
       {/* bolts */}
-      {BOLT_POSITIONS.map(( position ) => {
+      {BOLT_POSITIONS.map((position) => {
         return (
-          <span aria-hidden="true" className={`frame-bolt frame-bolt__${position}`}/>
+          <span aria-hidden="true" className={`frame-bolt frame-bolt__${position}`} />
         )
       })}
 
@@ -36,14 +36,16 @@ const SpaceshipNav = () => {
       bg-nav-bg-inner py-2 px-4 inset-shadow-dark">
         <GitHubActivityTicker />
         <div className="flex flex-row gap-2 mx-auto md:ml-auto shrink-0">
-          <SpaceshipNavButton text="HOME" route="/"/>
-          <SpaceshipNavButton text="PROJECTS" route="/projects"/>
+          <SpaceshipNavButton text="HOME" route="/" />
+          <SpaceshipNavButton text="PROJECTS" route="/projects" />
+
           <div className="flex flex-col gap-0.75 justify-center mx-4">
             {vents}
           </div>
-          <SpaceshipRedirectButton type="github"/>
-          <SpaceshipRedirectButton type="linkedin"/>
-          <SpaceshipRedirectButton type="resume"/>
+
+          <SpaceshipRedirectButton type="github" />
+          <SpaceshipRedirectButton type="linkedin" />
+          <SpaceshipRedirectButton type="resume" />
         </div>
       </nav>
     </div>

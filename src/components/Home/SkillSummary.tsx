@@ -48,9 +48,7 @@ const SkillSummary = () => {
                     </button>
                 ))}
             </div>
-            <div className="flex flex-row items-center justify-center gap-4 w-full md:w-1/2 h-40 
-                bg-white/5 backdrop-blur-xs 
-                border border-neutral-400 place-self-center py-4 px-4">
+            <div className="glass-container animated-border__shine flex flex-row items-center justify-center gap-4 w-full md:w-1/2 h-40 place-self-center py-4 px-4">
                 <AnimatePresence mode="wait">
                         {options
                             .filter(option => selectedSkill === option.name)
