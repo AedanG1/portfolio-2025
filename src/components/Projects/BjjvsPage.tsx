@@ -3,7 +3,7 @@ import { bjjvsHero, aws, editTags, editVideo, filter, thumbnail, upload} from "@
 
 const BjjvsPage = () => {
   return (
-    <main className="space-y-20 mb-100">
+    <main className="space-y-20">
       <header className="space-y-2">
         <p>2024 · personal project</p>
         <h1 className="text-4xl font-semibold w-full">Video Sharing Web App</h1>

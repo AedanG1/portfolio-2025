@@ -3,7 +3,7 @@ import { meshHero } from "@assets/meshchat";
 
 const MeshChatPage = () => {
   return (
-    <main className="space-y-20 mb-100">
+    <main className="space-y-20">
       <header className="space-y-2">
         <p>2026 · personal project</p>
         <h1 className="text-4xl font-semibold w-full">Mesh Chat</h1>

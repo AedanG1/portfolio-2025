@@ -3,7 +3,7 @@ import { paliaHero, afterInp, afterRender, beforeInp, beforeRender, map, notific
 
 const PaliaSchedulerPage = () => {
   return (
-    <main className="space-y-20 mb-100">
+    <main className="space-y-20">
       <header className="space-y-2">
         <p>2025 · personal project</p>
         <h1 className="text-4xl font-semibold w-full">Palia Scheduler</h1>
