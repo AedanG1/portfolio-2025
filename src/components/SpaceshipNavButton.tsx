@@ -5,7 +5,7 @@ type SpaceshipButtonProps = {
   route: '/' | '/projects';
 }
 
-const SpaceshipNavButton = ({text, route}: SpaceshipButtonProps) => {
+const SpaceshipNavButton = ({ text, route }: SpaceshipButtonProps) => {
   const location = useLocation();
   const variant = location.pathname === route ? 'active' : 'default';
 
@@ -18,7 +18,7 @@ const SpaceshipNavButton = ({text, route}: SpaceshipButtonProps) => {
     <Link to={route} className={`relative font-nav-button px-3 py-2 rounded-lg border-2 border-black 
     inset-shadow-white/40 inset-shadow-xs shadow-nav-button bg-linear-to-b ${variants[variant]}`}>
       {variant === 'active' &&
-      <span className="absolute blur-sm text-nav-button-louder">{text}</span> 
+        <span className="absolute blur-sm text-nav-button-louder">{text}</span>
       }
       {text}
     </Link>
