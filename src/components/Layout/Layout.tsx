@@ -4,7 +4,7 @@ import SpaceshipNav from "../SpaceshipNav";
 
 const Layout = () => {
     return (
-        <main className="max-w-6xl mx-auto px-2 pb-64">
+        <main className="max-w-7xl mx-auto px-2 pb-64">
             <Starfield />
             <div className="relative z-10">
                 <SpaceshipNav />

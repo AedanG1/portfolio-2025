@@ -18,11 +18,11 @@
 	--color-nav-button-active-dark: #161616;
 	--color-nav-button-light: #555555;
 	--color-nav-button-dark: #2C2C2C;
-	--color-redirect-button-light: #657B8F;
-	--color-redirect-button-dark: #252D32;
-	--color-resume-button-normal: #D4D4D4;
-	--color-resume-button-light: #D16C00;
-	--color-resume-button-dark: #431F00;
+	--color-gray-light: #657B8F;
+	--color-gray-dark: #252D32;
+	--color-orange-normal: #D4D4D4;
+	--color-orange-light: #D16C00;
+	--color-orange-dark: #431F00;
 	--color-frame-light: #303030;
 	--color-frame-mid: #242424;
 	--color-frame-dark: #1E1E1E;
@@ -126,6 +126,14 @@
   }
 }
 
+.gray-gradient {
+  @apply bg-linear-to-b from-gray-light to-gray-dark;
+}
+
+.orange-gradient {
+  @apply bg-linear-to-b from-orange-light to-orange-dark;
+}
+
 .glass-container {
   @apply backdrop-blur-xs bg-slate-600/5 rounded-xl border border-slate-400/40 shadow-slate-300 dark:shadow-slate-900;
 }
@@ -147,6 +155,18 @@
 	background: white;
 	border-radius: 50%;
 	opacity: 0.25;
+}
+
+.frame-bg {
+  @apply bg-linear-to-b from-frame-light via-frame-mid via-45% to-frame-dark;
+}
+
+.frame-inner-bg {
+  @apply bg-nav-bg-inner inset-shadow-dark;
+}
+
+.frame-border {
+  @apply rounded-sm border-2 border-t-frame-border-t border-l-frame-border-l border-r-frame-border-r border-b-frame-border-b;
 }
 
 .frame-rail {

@@ -27,6 +27,27 @@ const Icons = {
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={className}>
       <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
     </svg>
+  ),
+  StatusLed: (statusColor: string) => (
+
+    // TODO: status LED shouldn't glow when status is inactive state
+
+    <div>
+      <svg width={16} height={16} className="absolute blur-xs">
+        <circle cx={8} cy={8} r={4} fill={statusColor}/>
+      </svg>
+      <svg width={16} height={16} className="relative">
+        <circle cx={8} cy={8} r={4} fill={statusColor}/>
+          <path
+          d="M 4.5 6.9 A 4 5.2 0 0 1 11.4 6.9"
+          fill="none"
+          stroke="white"
+          strokeWidth={1}
+          strokeLinecap="round"
+          opacity={0.4}
+        />
+      </svg>
+    </div>
   )
 }
 

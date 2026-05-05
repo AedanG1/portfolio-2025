@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import GitHubActivities from "./GitHubActivities";
+import Icons from "@assets/Icons/Icons";
 
 export type GitHubEvent = {
   id: string;
@@ -73,22 +74,7 @@ const GitHubActivityTicker = () => {
       hover:cursor-pointer shadow-nav-button w-5 h-11 rounded-xs border border-black`}/>
 
       {/* Status LED */}
-      <div>
-        <svg width={16} height={16} className="absolute blur-xs">
-          <circle cx={8} cy={8} r={4} fill={statusColor}/>
-        </svg>
-        <svg width={16} height={16} className="relative">
-          <circle cx={8} cy={8} r={4} fill={statusColor}/>
-            <path
-            d="M 4.5 6.9 A 4 5.2 0 0 1 11.4 6.9"
-            fill="none"
-            stroke="white"
-            strokeWidth={1}
-            strokeLinecap="round"
-            opacity={0.4}
-          />
-        </svg>
-      </div>
+      {Icons.StatusLed(statusColor)}
 
       {/* Worn Label */}
       <span className="font-worn text-nav-button-subtle text-xs flex flex-col items-center">

@@ -1,6 +1,7 @@
 import GitHubActivityTicker from "./GitHubActivityTicker";
 import SpaceshipNavButton from "./SpaceshipNavButton";
 import SpaceshipRedirectButton from "./SpaceshipRedirectButton";
+import Icons from "@assets/Icons/Icons";
 
 const SpaceshipNav = () => {
 
@@ -15,9 +16,7 @@ const SpaceshipNav = () => {
   const BOLT_POSITIONS = ["tl", "tr", "bl", "br", "tm", "bm"] as const;
 
   return (
-    <div className="fixed w-full max-w-7xl mx-auto z-50 top-0 left-0 right-0 mt-4 py-2 px-2 
-    bg-linear-to-b from-frame-light via-frame-mid via-45% to-frame-dark
-    rounded-sm border-2 border-t-frame-border-t border-l-frame-border-l border-r-frame-border-r border-b-frame-border-b">
+    <div className="fixed w-full max-w-7xl mx-auto z-50 top-0 left-0 right-0 mt-4 py-2 px-2 md:px-8 frame-bg frame-border">
 
       {/* left rail */}
       <span aria-hidden="true" className="frame-rail frame-rail__left" />
@@ -32,8 +31,7 @@ const SpaceshipNav = () => {
         )
       })}
 
-      <nav className="flex flex-row gap-8 items-center 
-      bg-nav-bg-inner py-2 px-4 inset-shadow-dark">
+      <nav className="flex flex-row gap-8 items-center py-2 px-4 frame-inner-bg">
         <GitHubActivityTicker />
         <div className="flex flex-row gap-2 mx-auto md:ml-auto shrink-0">
           <SpaceshipNavButton text="HOME" route="/" />
@@ -43,13 +41,40 @@ const SpaceshipNav = () => {
             {vents}
           </div>
 
-          <SpaceshipRedirectButton type="github" />
-          <SpaceshipRedirectButton type="linkedin" />
-          <SpaceshipRedirectButton type="resume" />
+          <SpaceshipRedirectButton
+            text=""
+            color="gray-gradient"
+            shape="circle"
+            icon={Icons.GitHub("size-6", "#FFFFFF")}
+            url="https://github.com/AedanG1"
+          />
+          <SpaceshipRedirectButton
+            text=""
+            color="gray-gradient"
+            shape="circle"
+            icon={Icons.Linkedin("size-6", "#FFFFFF")}
+            url="https://linkedin.com/in/aedan-gallivan"
+          />
+          <SpaceshipRedirectButton
+            text="Resumé"
+            color="orange-gradient text-orange-normal"
+            shape="default"
+            icon={Icons.ArrowTopRight("size-4")}
+            url="/Aedan_Gallivan_Resume.pdf"
+          />
         </div>
       </nav>
     </div>
   )
 }
+/*
+ *
+  text: string | null;
+  color: string;
+  shape: 'circle' | 'default';
+  icon: string | null;
+  url: string;
+ *
+*/
 
 export default SpaceshipNav;
