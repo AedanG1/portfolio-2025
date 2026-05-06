@@ -1,13 +1,17 @@
+import { Project } from "../../data/projects";
+import SpaceshipRedirectButton from "../SpaceshipRedirectButton";
 import ContentListItem from "./ContentListItem";
 import { Heading } from "./extractContentHeadings";
-import { JSX } from "react";
+import Icons from "@assets/Icons/Icons";
 
 type ProjectAsideProps = {
   headings: Array<Heading>;
-  asideRedirectButton: JSX.Element;
+  meta: Project;
 }
 
-const ProjectAside = ({headings, asideRedirectButton}: ProjectAsideProps) => {
+const ProjectAside = ({headings, meta}: ProjectAsideProps) => {
+
+  const redirectText = meta.liveUrl ? "View Live" : "View on GitHub";
 
   const contentListItems = headings.map(({ label, depth, htmlId }) => (
     <ContentListItem key={htmlId} label={label} depth={depth} htmlId={htmlId} />
@@ -27,7 +31,13 @@ const ProjectAside = ({headings, asideRedirectButton}: ProjectAsideProps) => {
       <div className="flex flex-col gap-8 frame-inner-bg py-4 px-4">
         <div className="space-y-4 m-0">
           <h2 className="text-2xl font-worn text-body-normal">View Project</h2>
-          {asideRedirectButton}
+          <SpaceshipRedirectButton 
+            text={redirectText} 
+            style="blue-gradient inline-flex"
+            shape="default"
+            icon={Icons.ArrowTopRight("size-4")}
+            url={meta.liveUrl ? meta.liveUrl : meta.githubUrl}
+          />
         </div>
         <div>
           <h2 className="text-2xl mb-2 font-worn text-body-normal">Contents</h2>

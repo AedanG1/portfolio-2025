@@ -1,6 +1,10 @@
+import { JSX } from "react";
 import { meshHero } from "@assets/meshchat";
 import { paliaHero } from "@assets/paliascheduler";
 import { bjjvsHero } from "@assets/bjjvs";
+import MeshChatArticle from "../components/Projects/MeshChatArticle";
+import PaliaSchedulerArticle from "../components/Projects/PaliaSchedulerArticle";
+import BjjvsArticle from "../components/Projects/BjjvsArticle";
 
 export type Project = {
   link: string;
@@ -10,6 +14,9 @@ export type Project = {
   title: string;
   stackArr: string[];
   desc: string;
+  githubUrl: string;
+  liveUrl: string;
+  article: JSX.Element;
 }
 
 export const projects: Project[] = [
@@ -27,7 +34,10 @@ export const projects: Project[] = [
       "WebCrypto",
       "SQLite3",
     ],
-    desc:"An End-to-End Encrypted chat app with an n-to-n mesh server topology."
+    desc:"An End-to-End Encrypted chat app with an n-to-n mesh server topology.",
+    githubUrl: "https://github.com/AedanG1/mesh-chat",
+    liveUrl: "",
+    article: <MeshChatArticle />
   },
   {
     link: "/projects/paliascheduler",
@@ -41,7 +51,10 @@ export const projects: Project[] = [
       "Python",
       "Vitest"
     ],
-    desc: "A scheduling app for Palia (videogame). Users can schedule in-game events and get notified when they're about to go live."
+    desc: "A scheduling app for Palia (videogame). Users can schedule in-game events and get notified when they're about to go live.",
+    githubUrl: "",
+    liveUrl: "https://paliascheduler.com",
+    article: <PaliaSchedulerArticle />
   },
   {
     link: "/projects/bjjvs",
@@ -56,6 +69,9 @@ export const projects: Project[] = [
       "PostgreSQL",
       "AWS"
     ],
-    desc: "A video sharing app where Admins can upload videos for users to watch and favorite. Filter by tags to find specific videos by topic."
+    desc: "A video sharing app where Admins can upload videos for users to watch and favorite. Filter by tags to find specific videos by topic.",
+    githubUrl: "https://github.com/AedanG1/bjjvs-app",
+    liveUrl: "",
+    article: <BjjvsArticle />
   }
 ]

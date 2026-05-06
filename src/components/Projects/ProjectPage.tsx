@@ -2,16 +2,18 @@ import ProjectAside from "./ProjectAside";
 import { JSX } from "react";
 import extractContentHeadings from "./extractContentHeadings";
 import { Project } from "../../data/projects";
+import SpaceshipRedirectButton from "../SpaceshipRedirectButton";
+import Icons from "@assets/Icons/Icons";
 
 type ProjectPageProps = {
   meta: Project;
   article: JSX.Element;
-  articleRedirectButton: JSX.Element;
-  asideRedirectButton: JSX.Element;
 }
 
-const ProjectPage = ({meta, article, articleRedirectButton, asideRedirectButton}: ProjectPageProps) => {
+const ProjectPage = ({meta, article}: ProjectPageProps) => {
   const headings = extractContentHeadings(article);
+
+  const redirectText = meta.liveUrl ? "View Live" : "View on GitHub";
 
   return (
     <main className="space-y-20">
@@ -28,7 +30,13 @@ const ProjectPage = ({meta, article, articleRedirectButton, asideRedirectButton}
                 <h1 className="text-4xl font-semibold w-full">{meta.title}</h1>
                 <p>{meta.dateType}</p>
               </div>
-              {articleRedirectButton}
+              <SpaceshipRedirectButton 
+                text={redirectText} 
+                style="blue-gradient inline-flex md:hidden"
+                shape="default"
+                icon={Icons.ArrowTopRight("size-4")}
+                url={meta.liveUrl ? meta.liveUrl : meta.githubUrl}
+              />
             </div>
           </header>
 
@@ -36,7 +44,7 @@ const ProjectPage = ({meta, article, articleRedirectButton, asideRedirectButton}
           {article}
         </div>
 
-        <ProjectAside headings={headings} asideRedirectButton={asideRedirectButton} />
+        <ProjectAside headings={headings} meta={meta} />
 
       </div>
     </main>

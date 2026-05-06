@@ -71,6 +71,10 @@
     @apply space-y-8;
   }
 
+  article ul {
+    @apply list-disc pl-5;
+  }
+
   article div {
     @apply space-y-2;
   }
