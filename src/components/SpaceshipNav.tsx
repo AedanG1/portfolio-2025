@@ -27,7 +27,7 @@ const SpaceshipNav = () => {
       {/* bolts */}
       {BOLT_POSITIONS.map((position) => {
         return (
-          <span aria-hidden="true" className={`frame-bolt frame-bolt__${position}`} />
+          <span key={position} aria-hidden="true" className={`frame-bolt frame-bolt__${position}`} />
         )
       })}
 

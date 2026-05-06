@@ -15,6 +15,15 @@ const ProjectPage = ({meta, article}: ProjectPageProps) => {
 
   const redirectText = meta.liveUrl ? "View Live" : "View on GitHub";
 
+  const techStack = meta.stackArr.map((item, i) => (
+    <li key={item} className="text-sm">
+      {item}
+      {i < meta.stackArr.length - 1 &&
+        <span className="pl-2 pr-1">·</span>
+      }
+    </li>
+  ));
+
   return (
     <main className="space-y-20">
       <div className="flex flex-col-reverse md:flex-row gap-20">
@@ -26,9 +35,10 @@ const ProjectPage = ({meta, article}: ProjectPageProps) => {
               alt={meta.alt}
             />
             <div className="flex flex-row justify-between">
-              <div>
-                <h1 className="text-4xl font-semibold w-full">{meta.title}</h1>
+              <div className="space-y-2">
                 <p>{meta.dateType}</p>
+                <h1 className="text-4xl font-semibold w-full">{meta.title}</h1>
+                <ul className="flex flex-row gap-1 flex-wrap text-sm text-body-muted">{techStack}</ul>
               </div>
               <SpaceshipRedirectButton 
                 text={redirectText} 
