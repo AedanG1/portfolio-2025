@@ -45,7 +45,7 @@ const ProjectCard = ({
       'small': 'h-fit md:flex-row'
     },
     imgContainer: {
-      'large': 'h-75',
+      'large': 'h-90',
       'small': 'basis-2/5 h-36'
     },
     textContainer: {
@@ -72,12 +72,10 @@ const ProjectCard = ({
         />
       </div>
       <div className={`${variantStyles.textContainer[size]} space-y-1`}>
-        <p className="text-sm">{dateType}</p>
-        <p className="text-2xl">{title}</p>
-        <ul className="flex flex-row gap-1 flex-wrap">{techStack}</ul>
-        <p className="text-sm text-neutral-800 dark:text-neutral-50">
-          {desc}
-        </p>
+        <p className="text-sm text-body-muted">{dateType}</p>
+        <p className="text-2xl text-moon-light">{title}</p>
+        <ul className="flex flex-row gap-1 flex-wrap text-sm text-body-muted">{techStack}</ul>
+        <p className="text-sm text-body-loud">{desc}</p>
       </div>
     </div>
   );

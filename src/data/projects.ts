@@ -2,7 +2,7 @@ import { meshHero } from "@assets/meshchat";
 import { paliaHero } from "@assets/paliascheduler";
 import { bjjvsHero } from "@assets/bjjvs";
 
-type Project = {
+export type Project = {
   link: string;
   img: string;
   alt: string;

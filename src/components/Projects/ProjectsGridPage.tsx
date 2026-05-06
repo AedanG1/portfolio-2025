@@ -1,7 +1,7 @@
 import ProjectCard from "./ProjectCard";
 import { projects } from "../../data/projects";
 
-const ProjectsPage = () => {
+const ProjectsGridPage = () => {
 
   const projectCards = projects.map(
     (project) => (
@@ -38,4 +38,4 @@ const ProjectsPage = () => {
   );
 };
 
-export default ProjectsPage;
+export default ProjectsGridPage;

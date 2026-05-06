@@ -15,7 +15,7 @@ const SpaceshipNavButton = ({ text, route }: SpaceshipButtonProps) => {
   }
 
   return (
-    <Link to={route} className={`relative font-nav-button px-3 py-2 rounded-lg border-2 border-black 
+    <Link to={route} className={`relative font-nav-button px-3 py-2 rounded-lg border-3 border-black 
     inset-shadow-white/40 inset-shadow-xs shadow-nav-button bg-linear-to-b ${variants[variant]}`}>
       {variant === 'active' &&
         <span className="absolute blur-sm text-nav-button-louder">{text}</span>

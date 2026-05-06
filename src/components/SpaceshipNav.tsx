@@ -43,21 +43,21 @@ const SpaceshipNav = () => {
 
           <SpaceshipRedirectButton
             text=""
-            color="gray-gradient"
+            style="gray-gradient"
             shape="circle"
             icon={Icons.GitHub("size-6", "#FFFFFF")}
             url="https://github.com/AedanG1"
           />
           <SpaceshipRedirectButton
             text=""
-            color="gray-gradient"
+            style="gray-gradient"
             shape="circle"
             icon={Icons.Linkedin("size-6", "#FFFFFF")}
             url="https://linkedin.com/in/aedan-gallivan"
           />
           <SpaceshipRedirectButton
             text="Resumé"
-            color="orange-gradient text-orange-normal"
+            style="orange-gradient text-orange-normal"
             shape="default"
             icon={Icons.ArrowTopRight("size-4")}
             url="/Aedan_Gallivan_Resume.pdf"
@@ -67,14 +67,5 @@ const SpaceshipNav = () => {
     </div>
   )
 }
-/*
- *
-  text: string | null;
-  color: string;
-  shape: 'circle' | 'default';
-  icon: string | null;
-  url: string;
- *
-*/
 
 export default SpaceshipNav;

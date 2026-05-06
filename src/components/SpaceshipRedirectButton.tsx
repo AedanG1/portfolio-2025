@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 type SpaceshipRedirectButtonProps = {
   text: string | null;
-  color: string;
+  style: string;
   shape: 'circle' | 'default';
   icon: ReactNode | null;
   url: string;
@@ -11,7 +11,7 @@ type SpaceshipRedirectButtonProps = {
 
 const SpaceshipRedirectButton = ({
   text,
-  color,
+  style,
   shape,
   icon,
   url
@@ -23,8 +23,8 @@ const SpaceshipRedirectButton = ({
   };
 
   return (
-    <Link to={url} target="_blank" className={`${shapeStyle[shape]} ${color} flex flex-row items-center gap-2 font-nav-button
-    border-2 border-black inset-shadow-white/40 inset-shadow-xs shadow-nav-button`}>
+    <Link to={url} target="_blank" className={`${shapeStyle[shape]} ${style} flex flex-row items-center gap-2 font-nav-button
+    border-3 border-black inset-shadow-white/40 inset-shadow-xs shadow-nav-button`}>
       {text}
       <span>{icon}</span>
     </Link>
