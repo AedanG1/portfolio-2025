@@ -10,14 +10,14 @@ const Home = () => {
           Aedan Gallivan
         </h1>
         <div>
-          <span className="absolute pointer-events-none blur bg-linear-to-b from-moon/30 to-moon-light/30 bg-clip-text text-transparent text-5xl font-semibold py-2">
+          <span className="absolute pointer-events-none blur bg-linear-to-b from-moon/30 to-moon-light/30 bg-clip-text text-transparent text-4xl md:text-5xl font-semibold py-2">
             Full-Stack Developer<br></br>& Designer
           </span>
-          <h2 className="text-nowrap relative bg-linear-to-b from-moon to-moon-light bg-clip-text text-transparent text-5xl font-semibold py-2">
+          <h2 className="md:text-nowrap relative bg-linear-to-b from-moon to-moon-light bg-clip-text text-transparent text-4xl md:text-5xl font-semibold py-2">
             Full-Stack Developer<br></br>& Designer
           </h2>
         </div>
-        <p className="text-md mt-4 w-110">
+        <p className="text-md mt-4 md:w-110">
           With a background in Product Design I take products from ideas to
           deployment, prioritizing user experience on the front end and clean,
           readable code throughout.

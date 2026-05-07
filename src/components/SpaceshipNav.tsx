@@ -16,7 +16,7 @@ const SpaceshipNav = () => {
   const BOLT_POSITIONS = ["tl", "tr", "bl", "br", "tm", "bm"] as const;
 
   return (
-    <div className="fixed w-full max-w-7xl mx-auto z-50 top-0 left-0 right-0 mt-4 py-2 px-2 md:px-8 frame-bg frame-border">
+    <div className="fixed w-full max-w-7xl mx-auto z-50 top-0 left-0 right-0 md:mt-4 py-2 px-2 md:px-8 frame-bg frame-border">
 
       {/* left rail */}
       <span aria-hidden="true" className="frame-rail frame-rail__left" />
@@ -31,19 +31,19 @@ const SpaceshipNav = () => {
         )
       })}
 
-      <nav className="flex flex-row gap-8 items-center py-2 px-4 frame-inner-bg">
+      <nav className="flex flex-row gap-8 items-center py-2 md:px-4 frame-inner-bg">
         <GitHubActivityTicker />
         <div className="flex flex-row gap-2 mx-auto md:ml-auto shrink-0">
           <SpaceshipNavButton text="HOME" route="/" />
           <SpaceshipNavButton text="PROJECTS" route="/projects" />
 
-          <div className="flex flex-col gap-0.75 justify-center mx-4">
+          <div className="md:flex flex-col gap-0.75 justify-center mx-4 hidden">
             {vents}
           </div>
 
           <SpaceshipRedirectButton
             text=""
-            style="gray-gradient"
+            style="gray-gradient hidden md:block"
             shape="circle"
             icon={Icons.GitHub("size-6", "#FFFFFF")}
             url="https://github.com/AedanG1"

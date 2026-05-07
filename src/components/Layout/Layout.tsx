@@ -7,7 +7,7 @@ const Layout = () => {
     const location = useLocation();
 
     return (
-        <main className={`max-w-7xl mx-auto px-2 
+        <main className={`max-w-7xl mx-auto px-2 md:px-20 xl:px-0
         ${(location.pathname === "/projects" || !location.pathname.startsWith("/projects")) && "pb-64"}
         `}>
             <Starfield />
