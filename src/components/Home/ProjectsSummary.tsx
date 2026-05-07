@@ -21,10 +21,10 @@ const ProjectsSummary = () => {
   return (
     <section className="flex flex-col md:flex-row mt-44 space-y-6 md:justify-between md:flex-wrap">
       <div className="w-full md:w-fit">
-        <span className="absolute blur bg-linear-to-b from-moon/20 to-moon-light/20 bg-clip-text text-transparent text-5xl font-semibold">
+        <span className="absolute blur bg-linear-to-b from-moon/20 to-moon-light/20 bg-clip-text text-transparent text-4xl md:text-5xl font-semibold">
           Projects
         </span>
-        <h3 className="relative bg-linear-to-b from-moon to-moon-light bg-clip-text text-transparent text-5xl font-semibold">
+        <h3 className="relative bg-linear-to-b from-moon to-moon-light bg-clip-text text-transparent text-4xl md:text-5xl font-semibold">
           Projects
         </h3>
       </div>

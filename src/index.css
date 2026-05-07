@@ -18,9 +18,9 @@
 }
 
 @theme {
-	--font-display: DM Sans, "sans-serif";
-	--font-nav-button: Space Mono, "sans-serif";
-	--font-worn: Syne Mono, "sans-serif";
+	--font-display: "DM Sans", "sans-serif";
+	--font-nav-button: "Space Mono", "sans-serif";
+	--font-worn: "Syne Mono", "sans-serif";
 	--font-terminal: Glass, "sans-serif";
 	--color-nav-bg-inner: #121212;
 	--color-nav-button-subtle: #A2A2A2;
