@@ -28,27 +28,45 @@ const Icons = {
       <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
     </svg>
   ),
-  StatusLed: (statusColor: string) => (
+  StatusLed: (statusColor: string) => {
 
-    // TODO: status LED shouldn't glow when status is inactive state
+    let fillColor;
+    switch (statusColor) {
+      case "error":
+        fillColor = "#FF0000";
+        break;
+      case "inactive":
+        fillColor = "#333333";
+        break;
+      case "paused":
+        fillColor = "#FFB700";
+        break;
+      case "active":
+        fillColor = "#00FF1E";
+        break;
+    }
 
-    <div>
-      <svg width={16} height={16} className="absolute blur-xs">
-        <circle cx={8} cy={8} r={4} fill={statusColor}/>
-      </svg>
-      <svg width={16} height={16} className="relative">
-        <circle cx={8} cy={8} r={4} fill={statusColor}/>
+    return (
+      <div>
+        {statusColor !== "inactive" &&
+          <svg width={16} height={16} className="absolute blur-xs">
+            <circle cx={8} cy={8} r={4} fill={fillColor} />
+          </svg>
+        }
+        <svg width={16} height={16} className="relative">
+          <circle cx={8} cy={8} r={4} fill={fillColor} />
           <path
-          d="M 4.5 6.9 A 4 5.2 0 0 1 11.4 6.9"
-          fill="none"
-          stroke="white"
-          strokeWidth={1}
-          strokeLinecap="round"
-          opacity={0.4}
-        />
-      </svg>
-    </div>
-  )
+            d="M 4.5 6.9 A 4 5.2 0 0 1 11.4 6.9"
+            fill="none"
+            stroke="white"
+            strokeWidth={1}
+            strokeLinecap="round"
+            opacity={0.4}
+          />
+        </svg>
+      </div>
+    )
+  }
 }
 
 export default Icons;

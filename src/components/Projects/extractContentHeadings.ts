@@ -14,11 +14,11 @@ const extractContentHeadings = (element: JSX.Element): Heading[] => {
 
     const { type, props } = el as JSX.Element & { props: { id?: string; children?: React.ReactNode } };
 
-    if (type === "h2" || type === "h3") {
-      if (props.id) {
+    if (type === "div") {
+      if (props.id && props["data-label"]) {
         headings.push({
-          label: Children.toArray(props.children).join("").trim(),
-          depth: (type === "h2" ? 0 : 1) as 0 | 1,
+          label: props["data-label"],
+          depth: props["data-depth"] as 0 | 1,
           htmlId: `#${props.id}`,
         });
       }

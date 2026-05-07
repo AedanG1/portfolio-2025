@@ -4,9 +4,10 @@ type ContentListItemProps = {
   label: string;
   depth: 0 | 1;
   htmlId: string;
+  currentHeader: string;
 }
 
-const ContentListItem = ({label, depth, htmlId}: ContentListItemProps) => {
+const ContentListItem = ({label, depth, htmlId, currentHeader}: ContentListItemProps) => {
 
   const depthStyles = {
     0: "",
@@ -15,7 +16,7 @@ const ContentListItem = ({label, depth, htmlId}: ContentListItemProps) => {
 
   return (
     <li className={`flex flex-row items-center gap-2 ${depthStyles[depth]}`}>
-      {Icons.StatusLed("#FFFFFF")}
+      {Icons.StatusLed(`${htmlId === currentHeader ? "active" : "inactive"}`)}
       <a
         href={htmlId}
         className="transition duration-200 hover:text-sky-400/80"

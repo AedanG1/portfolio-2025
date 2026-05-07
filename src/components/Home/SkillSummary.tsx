@@ -29,7 +29,6 @@ const SkillSummary = () => {
 
   return (
     <section className="space-y-2">
-      <h4 className="w-full md:w-1/2 text-xl place-self-center">My tools so far,</h4>
       <div className="w-full md:w-1/2 place-self-center px-2 py-2 flex flex-row">
         {options.map((option) => (
           <button
@@ -38,11 +37,10 @@ const SkillSummary = () => {
             onClick={handleSkillClick}
             type="button"
             data-active={selectedSkill === option.name}
-            className={`relative w-1/3 text-sm py-2 px-2 hover:cursor-pointer hover:text-neutral-800 hover:dark:text-neutral-50
-                            ${selectedSkill === option.name ? "text-neutral-800 dark:text-neutral-50" : "text-neutral-500 dark:text-neutral-400"}`}
+            className={`relative w-1/3 text-sm py-2 px-2 hover:cursor-pointer hover:text-body-loud 
+              ${selectedSkill === option.name ? "text-body-loud" : "text-body-muted"}`}
           >
-            {option.name.charAt(0).toUpperCase() + option.name.slice(1)}
-
+            {option.name.charAt(0).toUpperCase() + option.name.slice(1) + " experience"}
             {/* active state indicator */}
             {selectedSkill === option.name && 
             <motion.div

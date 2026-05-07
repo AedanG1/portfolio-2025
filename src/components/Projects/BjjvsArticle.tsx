@@ -1,15 +1,11 @@
-import { bjjvsHero, aws, editTags, editVideo, filter, thumbnail, upload} from "@assets/bjjvs"
+import { aws, editTags, editVideo, filter, thumbnail, upload } from "@assets/bjjvs"
 
 const BjjvsArticle = () => {
   return (
     <article>
-      <div>
-        <img
-          src={bjjvsHero}
-          loading="lazy"
-          alt="A screenshot of the homepage for a Video Sharing app. Shows a grid of videos"
-        />
-        <h2 id="overview">
+
+      <div id="overview" data-label="Overview" data-depth={0}>
+        <h2>
           Overview
         </h2>
         <hr></hr>
@@ -25,8 +21,9 @@ const BjjvsArticle = () => {
           MediaConvert saving storage space.
         </p>
       </div>
-      <div>
-        <h3 id="design-rationale">
+
+      <div id="design-rationale" data-label="Design Rationale" data-depth={1}>
+        <h3>
           Design Rationale
         </h3>
         <p>
@@ -61,12 +58,16 @@ const BjjvsArticle = () => {
           resources for their students to learn and succeed.
         </p>
       </div>
-      <h2 id="screenshots">
-        Screenshots
-      </h2>
-      <hr></hr>
-      <div>
-        <h3 id="library">
+
+      <div id="screenshots" data-label="Screenshots" data-depth={0}>
+        <h2>
+          Screenshots
+        </h2>
+        <hr></hr>
+      </div>
+
+      <div id="library" data-label="Library" data-depth={1}>
+        <h3>
           Library
         </h3>
         <img
@@ -79,8 +80,9 @@ const BjjvsArticle = () => {
           using tags created by an admin.
         </p>
       </div>
-      <div>
-        <h3 id="upload-video">
+
+      <div id="upload-video" data-label="Upload Video" data-depth={1}>
+        <h3>
           Upload Video
         </h3>
         <img
@@ -94,8 +96,9 @@ const BjjvsArticle = () => {
           instructor's name.
         </p>
       </div>
-      <div>
-        <h3 id="aws">
+
+      <div id="aws" data-label="AWS Pipeline" data-depth={1}>
+        <h3>
           AWS Pipeline
         </h3>
         <img src={aws} loading="lazy" alt="A diagram of the AWS pipeline" />
@@ -110,8 +113,9 @@ const BjjvsArticle = () => {
           able to request the optimized video from the S3 output bucket.
         </p>
       </div>
-      <div>
-        <h3 id="thumbnail">
+
+      <div id="thumbnail" data-label="Choosing a Thumbnail" data-depth={1}>
+        <h3>
           Choosing a Thumbnail
         </h3>
         <img
@@ -124,8 +128,9 @@ const BjjvsArticle = () => {
           thumbnail.
         </p>
       </div>
-      <div>
-        <h3 id="tags">
+
+      <div id="tags" data-label="Managing Tags" data-depth={1}>
+        <h3>
           Managing Tags
         </h3>
         <img
@@ -138,8 +143,9 @@ const BjjvsArticle = () => {
           members to filter videos with.
         </p>
       </div>
-      <div>
-        <h3 id="videos">
+
+      <div id="videos" data-label="Managing Videos" data-depth={1}>
+        <h3>
           Managing Videos
         </h3>
         <img
@@ -149,6 +155,7 @@ const BjjvsArticle = () => {
         />
         <p>Here admins can update or delete titles, tags, and videos</p>
       </div>
+
     </article>
   )
 }

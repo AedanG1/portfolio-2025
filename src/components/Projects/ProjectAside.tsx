@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Project } from "../../data/projects";
 import SpaceshipRedirectButton from "../SpaceshipRedirectButton";
 import ContentListItem from "./ContentListItem";
@@ -12,11 +13,27 @@ type ProjectAsideProps = {
 const BOLT_POSITIONS = ["tl", "tr", "bl", "br"] as const;
 
 const ProjectAside = ({ headings, meta }: ProjectAsideProps) => {
-      
+  const [currentHeader, setCurrentHeader] = useState<string>("");
+
+  useEffect(() => {
+    const elements = headings.map(header => document.getElementById(header.htmlId.slice(1)))
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setCurrentHeader(`#${entry.target.id}`);
+        }
+      });
+    }, { rootMargin: "-40% 0px -59% 0px" });
+
+    elements.forEach((e) => e && observer.observe(e));
+
+    return () => observer.disconnect();
+  }, [headings])
+
   const redirectText = meta.liveUrl ? "View Live" : "View on GitHub";
 
   const contentListItems = headings.map(({ label, depth, htmlId }) => (
-    <ContentListItem key={htmlId} label={label} depth={depth} htmlId={htmlId} />
+    <ContentListItem key={htmlId} label={label} depth={depth} htmlId={htmlId} currentHeader={currentHeader} />
   ));
 
   return (

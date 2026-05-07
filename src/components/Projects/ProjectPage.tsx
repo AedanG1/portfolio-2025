@@ -25,7 +25,7 @@ const ProjectPage = ({meta, article}: ProjectPageProps) => {
   ));
 
   return (
-    <main className="space-y-20">
+    <main className="space-y-20 scroll-smooth">
       <div className="flex flex-col-reverse md:flex-row gap-20">
         <div className="basis-3/4 space-y-8 pb-110">
           <header className="space-y-2">

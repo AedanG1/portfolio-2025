@@ -1,8 +1,8 @@
 const MeshChatArticle = () => {
   return (
     <article>
-      <div>
-        <h2 id="overview">
+      <div id="overview" data-label="Overview" data-depth={0}>
+        <h2>
           Overview
         </h2>
         <hr></hr>
@@ -23,8 +23,8 @@ const MeshChatArticle = () => {
         </p>
       </div>
 
-      <div>
-        <h3 id="development-approach">
+      <div id="development-approach" data-label="Development Approach" data-depth={1}>
+        <h3>
           Development Approach
         </h3>
         <p>
@@ -46,14 +46,14 @@ const MeshChatArticle = () => {
         </p>
       </div>
 
-      <div>
-        <h2 id="cryptography">
+      <div id="cryptography" data-label="Cryptography" data-depth={0}>
+        <h2>
           Cryptography
         </h2>
         <hr></hr>
 
-        <div>
-          <h3 id="asymmetric-keys">
+        <div id="asymmetric-keys" data-label="Asymmetric Keys" data-depth={1}>
+          <h3>
             Asymmetric Keys
           </h3>
           <p>
@@ -66,8 +66,8 @@ const MeshChatArticle = () => {
         </div>
       </div>
 
-      <div>
-        <h3 id="e2e-encryption">
+      <div id="e2e-encryption" data-label="End-to-End Encryption" data-depth={1}>
+        <h3>
           End-to-End Encryption
         </h3>
         <p>
@@ -89,8 +89,8 @@ const MeshChatArticle = () => {
         </p>
       </div>
 
-      <div>
-        <h3 id="signatures">
+      <div id="signatures" data-label="Transport & Content Signatures" data-depth={1}>
+        <h3>
           Transport & Content Signatures
         </h3>
         <p>
@@ -107,8 +107,8 @@ const MeshChatArticle = () => {
         </p>
       </div>
 
-      <div>
-        <h3 id="registration&login">
+      <div id="registration&login" data-label="Registration & Login" data-depth={1}>
+        <h3>
           Registration & Login
         </h3>
         <p className="mb-2">
@@ -160,14 +160,14 @@ const MeshChatArticle = () => {
         </p>
       </div>
 
-      <div>
-        <h2 id="managing-state">
+      <div id="managing-state" data-label="Managing State of the Mesh" data-depth={0}>
+        <h2>
           Managing State of the Mesh
         </h2>
         <hr></hr>
 
-        <div>
-          <h3 id="websockets">
+        <div id="websockets" data-label="WebSockets" data-depth={1}>
+          <h3>
             WebSockets
           </h3>
           <p>
@@ -177,8 +177,8 @@ const MeshChatArticle = () => {
         </div>
       </div>
 
-      <div>
-        <h3 id="in-memory-tables">
+      <div id="in-memory-tables" data-label="In-memory Tables" data-depth={1}>
+        <h3>
           In-memory Tables
         </h3>
         <p>
@@ -189,8 +189,8 @@ const MeshChatArticle = () => {
         </p>
       </div>
 
-      <div>
-        <h3 id="gossip">
+      <div id="gossip" data-label="Gossip" data-depth={1}>
+        <h3>
           Gossip
         </h3>
         <p>
@@ -209,8 +209,8 @@ const MeshChatArticle = () => {
         </p>
       </div>
 
-      <div>
-        <h3 id="avoiding-loops">
+      <div id="avoiding-loops" data-label="Avoiding Loops" data-depth={1}>
+        <h3>
           Avoiding Loops
         </h3>
         <p>
@@ -219,8 +219,8 @@ const MeshChatArticle = () => {
         </p>
       </div>
 
-      <div>
-        <h3 id="heartbeat">
+      <div id="heartbeat" data-label="Heartbeat" data-depth={1}>
+        <h3>
           Heartbeat
         </h3>
         <p>

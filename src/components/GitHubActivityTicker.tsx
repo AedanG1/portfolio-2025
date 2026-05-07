@@ -18,11 +18,11 @@ const GitHubActivityTicker = () => {
 
   let statusColor;
   if (error) {
-    statusColor = "#FF0000";
+    statusColor = "error";
   } else if (!animationState) {
-    statusColor = "#FFB700";
+    statusColor = "paused";
   } else {
-    statusColor = "#00FF1E";
+    statusColor = "active";
   }
 
   useEffect(() => {

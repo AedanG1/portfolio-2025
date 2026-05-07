@@ -3,7 +3,8 @@ import { afterInp, afterRender, beforeInp, beforeRender, map, notification, osUs
 const PaliaSchedulerArticle = () => {
   return (
     <article>
-        <h2 id="overview">
+      <div id="overview" data-label="Overview" data-depth={0}>
+        <h2>
           Overview
         </h2>
         <hr></hr>
@@ -11,9 +12,10 @@ const PaliaSchedulerArticle = () => {
           Palia Scheduler allows users to schedule in-game activities to be
           notified when they're about to go live.
         </p>
+      </div>
 
-      <div>
-        <h3 id="design-rationale">
+      <div id="design-rationale" data-label="Design Rationale" data-depth={1}>
+        <h3>
           Design Rationale
         </h3>
         <p>
@@ -22,25 +24,27 @@ const PaliaSchedulerArticle = () => {
           Currently, players have to refer to third-party sources (like the wiki) in order to know when
           these events take place. They must also constantly pay attention to the in-game time if there's
           an event coming up that they want to take part in, as events can only last a couple of real-life minutes.
-          It can be frustrating for a player to have to wait another real-life hour to attend an event 
+          It can be frustrating for a player to have to wait another real-life hour to attend an event
           because they lost track of time.
         </p>
         <p>
           In order to help players never miss an event they want to attend, I designed and developed this web
           app to notify players where and when those events are going to take place. The user can see the current in-game
-          time in relation to the events on their schedule via a live time-indicator bar, making it easy for users to 
-          see how much time they have before each event. Because there are so many events in Palia, the schedule also 
+          time in relation to the events on their schedule via a live time-indicator bar, making it easy for users to
+          see how much time they have before each event. Because there are so many events in Palia, the schedule also
           acts as a way to keep track of all the events <em>to</em> attend.
         </p>
       </div>
 
-      <h2 id="screenshots">
-        Screenshots
-      </h2>
-      <hr></hr>
+      <div id="screenshots" data-label="Screenshots" data-depth={0}>
+        <h2>
+          Screenshots
+        </h2>
+        <hr></hr>
+      </div>
 
-      <div>
-        <h3 id="scheduling">
+      <div id="scheduling" data-label="Scheduling" data-depth={1}>
+        <h3>
           Scheduling
         </h3>
         <img
@@ -54,8 +58,8 @@ const PaliaSchedulerArticle = () => {
         </p>
       </div>
 
-      <div>
-        <h3 id="locations">
+      <div id="locations" data-label="Locations" data-depth={1}>
+        <h3>
           Locations
         </h3>
         <img
@@ -69,8 +73,8 @@ const PaliaSchedulerArticle = () => {
         </p>
       </div>
 
-      <div>
-        <h3 id="notifications">
+      <div id="notifications" data-label="Notifications" data-depth={1}>
+        <h3>
           Notifications
         </h3>
         <img
@@ -85,13 +89,15 @@ const PaliaSchedulerArticle = () => {
         </p>
       </div>
 
-      <h2 id="technical-notes">
-        Technical Notes
-      </h2>
-      <hr></hr>
+      <div id="technical-notes" data-label="Technical Notes" data-depth={0}>
+        <h2>
+          Technical Notes
+        </h2>
+        <hr></hr>
+      </div>
 
-      <div>
-        <h3 id="web-scraping">
+      <div id="web-scraping" data-label="Web Scraping" data-depth={1}>
+        <h3>
           Web Scraping
         </h3>
         <p>
@@ -107,10 +113,8 @@ const PaliaSchedulerArticle = () => {
         </p>
       </div>
 
-      <div>
-        <h3
-          id="schedule-item-collision"
-        >
+      <div id="schedule-item-collision" data-label="Schedule Item Collision" data-depth={1}>
+        <h3>
           Schedule Item Collision
         </h3>
         <p>
@@ -137,10 +141,8 @@ const PaliaSchedulerArticle = () => {
         </p>
       </div>
 
-      <div>
-        <h3
-          id="optimizing-list-rendering"
-        >
+      <div id="optimizing-list-rendering" data-label="Optimizing list rendering" data-depth={1}>
+        <h3>
           Optimizing list rendering
         </h3>
         <p>
@@ -181,10 +183,8 @@ const PaliaSchedulerArticle = () => {
         />
       </div>
 
-      <div>
-        <h3
-          id="handling-ios-notifications"
-        >
+      <div id="handling-ios-notifications" data-label="Handling IOS Notifications" data-depth={1}>
+        <h3>
           Handling IOS Notifications (In Progress)
         </h3>
         <p>
