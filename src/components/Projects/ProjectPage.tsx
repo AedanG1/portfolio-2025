@@ -39,14 +39,14 @@ const ProjectPage = ({meta, article}: ProjectPageProps) => {
                 <p>{meta.dateType}</p>
                 <h1 className="text-4xl font-semibold w-full">{meta.title}</h1>
                 <ul className="flex flex-row gap-1 flex-wrap text-sm text-body-muted">{techStack}</ul>
+                <SpaceshipRedirectButton 
+                  text={redirectText} 
+                  style="blue-gradient inline-flex md:hidden mt-4"
+                  shape="default"
+                  icon={Icons.ArrowTopRight("size-4")}
+                  url={meta.liveUrl ? meta.liveUrl : meta.githubUrl}
+                />
               </div>
-              <SpaceshipRedirectButton 
-                text={redirectText} 
-                style="blue-gradient inline-flex md:hidden"
-                shape="default"
-                icon={Icons.ArrowTopRight("size-4")}
-                url={meta.liveUrl ? meta.liveUrl : meta.githubUrl}
-              />
             </div>
           </header>
 
