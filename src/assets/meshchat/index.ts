@@ -1,0 +1,1 @@
+export { default as meshHero } from './mesh-chat-hero.png';

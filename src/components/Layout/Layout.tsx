@@ -1,14 +1,23 @@
 import { Outlet } from "react-router";
-import NavBar from "./NavBar";
+import Starfield from "./Starfield";
+import SpaceshipNav from "../SpaceshipNav";
+import { useLocation } from "react-router";
 
 const Layout = () => {
+    const location = useLocation();
+
     return (
-        <>
-            <NavBar />
-            <div className="mt-32">
-                <Outlet />
+        <main className={`max-w-7xl mx-auto px-2 
+        ${(location.pathname === "/projects" || !location.pathname.startsWith("/projects")) && "pb-64"}
+        `}>
+            <Starfield />
+            <div className="relative z-10">
+                <SpaceshipNav />
+                <div className="mt-42">
+                    <Outlet />
+                </div>
             </div>
-        </>
+        </main>
     )
 }
 

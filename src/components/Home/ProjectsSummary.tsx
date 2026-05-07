@@ -1,53 +1,39 @@
-import ProjectCardSm from "../Projects/ProjectCardSm";
-import meshHero from "../../assets/mesh-chat-hero.png"
-import paliaHero from "../../assets/paliascheduler-hero.png"
-import bjjvsHero from "../../assets/bjjvs-hero.png"
+import ProjectCard from "../Projects/ProjectCard";
+import { projects } from "../../data/projects";
 
 const ProjectsSummary = () => {
 
-    return (
-        <section className="flex flex-col md:flex-row mt-44 space-y-6 md:space-y-0">
-            <h4 className="text-5xl font-semibold w-full md:w-4/6">Projects</h4>
-            <div className="w-full md:w-full flex flex-col gap-4">
-                <ProjectCardSm
-                    link="/projects/meshchat"
-                    img={meshHero}
-                    alt="A screenshot of the mesh topology of the mesh chat app"
-                    dateType="2026 · personal project"
-                    title="Mesh Chat"
-                    stackArr={["Express.js", "React", "TypeScript", "WebSockets", "WebCrypto", "SQLite3"]}
-                    desc="
-                        An End-to-End Encrypted chat app with an n-to-n mesh server topology.
-                    "
-                />
-                <ProjectCardSm
-                    link="/projects/paliascheduler"
-                    img={paliaHero}
-                    alt="A screenshot of the palia scheduler app"
-                    dateType="2025 · personal project"
-                    title="Palia Scheduler"
-                    stackArr={["Next.js", "Tailwind", "Python", "Vitest"]}
-                    desc="
-                        A scheduling app for Palia (videogame). Users can schedule in-game events and get notified when they're
-                        about to go live.
-                    "
-                />
-                <ProjectCardSm 
-                    link="/projects/bjjvs"
-                    img={bjjvsHero}
-                    alt="A screenshot of a video sharing web app"
-                    dateType="2025 · personal project"
-                    title="Video Sharing Web App"
-                    stackArr={["React", "Tailwind", "Express.js", "PostgreSQL", "AWS"]}
-                    desc="
-                        A video sharing app where Admins can upload videos for users to watch and favorite.
-                        Filter by tags to find specific videos by topic.
-                    "
-                />
-                <div>View more of my projects on <a className="underline" target="blank" href="https://github.com/AedanG1">GitHub</a></div>
-            </div>
-        </section>
-    )
+  const projectCards = projects.map(
+    (project) => (
+      <ProjectCard 
+        link={project.link}
+        img={project.img}
+        alt={project.alt}
+        dateType={project.dateType}
+        title={project.title}
+        stackArr={project.stackArr}
+        desc={project.desc}
+        size="small"
+      />
+    ) 
+  );
+
+  return (
+    <section className="flex flex-col md:flex-row mt-44 space-y-6 md:space-y-0">
+      <div className="w-full md:w-150">
+        <span className="absolute blur bg-linear-to-b from-moon/20 to-moon-light/20 bg-clip-text text-transparent text-5xl font-semibold">
+          Projects
+        </span>
+        <h3 className="relative bg-linear-to-b from-moon to-moon-light bg-clip-text text-transparent text-5xl font-semibold">
+          Projects
+        </h3>
+      </div>
+      <div className="md:w-170 flex flex-col gap-16 md:gap-4 md:shrink-0">
+        {projectCards}
+        <div>View more of my projects on <a className="underline" target="blank" href="https://github.com/AedanG1">GitHub</a></div>
+      </div>
+    </section>
+  )
 }
 
 export default ProjectsSummary;

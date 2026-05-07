@@ -3,14 +3,29 @@ import Layout from "./components/Layout/Layout"
 import Home from "./components/Home/Home"
 import { AnimatePresence } from "motion/react"
 import PageWrapper from "./components/Layout/PageWrapper"
-import ProjectsGrid from "./components/Projects/ProjectsGrid"
-import Contact from "./components/Contact/Contact"
-import BjjvsPage from "./components/Projects/BjjvsPage"
-import PaliaSchedulerPage from "./components/Projects/PaliaSchedulerPage"
-import MeshChatPage from "./components/Projects/MeshChatPage"
+import ProjectsGridPage from "./components/Projects/ProjectsGridPage.tsx"
+import { projects } from "./data/projects"
+import ProjectPage from "./components/Projects/ProjectPage.tsx"
 
 function App() {
   const location = useLocation();
+
+  const projectPages = projects.map(
+    (project) => {
+      return (
+        <Route path={project.link} element={
+          <AnimatePresence mode="wait">
+            <PageWrapper key={location.pathname}>
+              <ProjectPage 
+                meta={project}
+                article={project.article}
+              />
+            </PageWrapper>
+          </AnimatePresence>
+        }/>
+      )
+    }
+  )
 
   return (
     <Routes location={location}>
@@ -25,38 +40,11 @@ function App() {
         <Route path="/projects" element={
           <AnimatePresence mode="wait">
             <PageWrapper key={location.pathname}>
-              <ProjectsGrid />
+              <ProjectsGridPage />
             </PageWrapper>
           </AnimatePresence>
         }/>
-        <Route path="/projects/bjjvs" element={
-          <AnimatePresence mode="wait">
-            <PageWrapper key={location.pathname}>
-              <BjjvsPage />
-            </PageWrapper>
-          </AnimatePresence>
-        }/>
-        <Route path="/projects/paliascheduler" element={
-          <AnimatePresence mode="wait">
-            <PageWrapper key={location.pathname}>
-              <PaliaSchedulerPage />
-            </PageWrapper>
-          </AnimatePresence>
-        }/>
-        <Route path="/projects/meshchat" element={
-          <AnimatePresence mode="wait">
-            <PageWrapper key={location.pathname}>
-              <MeshChatPage />
-            </PageWrapper>
-          </AnimatePresence>
-        }/>
-        <Route path="/contact" element={
-          <AnimatePresence mode="wait">
-            <PageWrapper key={location.pathname}>
-              <Contact />
-            </PageWrapper>
-          </AnimatePresence>
-        }/>
+        {projectPages}
       </Route>
     </Routes>
   )
