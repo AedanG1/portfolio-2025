@@ -29,7 +29,7 @@ const SkillSummary = () => {
 
   return (
     <section className="space-y-2">
-      <div className="w-full md:w-1/2 place-self-center px-2 py-2 flex flex-row">
+      <div className="mx-auto w-full md:w-1/2 place-self-center px-2 py-2 flex flex-row">
         {options.map((option) => (
           <button
             key={`button-${option.name}`}
@@ -42,17 +42,17 @@ const SkillSummary = () => {
           >
             {option.name.charAt(0).toUpperCase() + option.name.slice(1) + " experience"}
             {/* active state indicator */}
-            {selectedSkill === option.name && 
-            <motion.div
-              className="absolute w-1/2 h-full top-0 left-[25%] right-0 border border-b-body-muted border-t-0 border-r-0 border-l-0"
-              layoutId="underline"
-              id="underline"
-            ></motion.div>}
+            {selectedSkill === option.name &&
+              <motion.div
+                className="absolute w-1/2 h-full top-0 left-[25%] right-0 border border-b-body-muted border-t-0 border-r-0 border-l-0"
+                layoutId="underline"
+                id="underline"
+              ></motion.div>}
 
           </button>
         ))}
       </div>
-      <div className="glass-container animated-border__shine flex flex-row items-center justify-center gap-4 w-full md:w-1/2 h-40 place-self-center py-4 px-4">
+      <div className="mx-auto glass-container animated-border__shine flex flex-row items-center justify-center gap-4 w-full md:w-1/2 h-40 py-4 px-4">
         <AnimatePresence mode="wait">
           {options
             .filter(option => selectedSkill === option.name)
